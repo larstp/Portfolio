@@ -1,5 +1,53 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-VariableItalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+}
+
 :root {
-  font-family: ui-sans-serif, system-ui, sans-serif;
+  --background: #202020;
+  --background-light: oklch(94.912% 0.00011 271.152);
+  --primary: oklch(59.184% 0.1063 179.921);
+  --accent: oklch(86.535% 0.14758 204.054 / 0.596);
+  --error: oklch(65.91% 0.249 13.76);
+  --white: #fff;
+  --text: var(--white);
+  --text-title: var(--text);
+  --text-body: color-mix(in lab, var(--text) 80%, transparent);
+  --text-light: color-mix(in lab, var(--text) 60%, transparent);
+  --font-family:
+    "Satoshi", system-ui, -apple-system, BlinkMacSystemFont, "San Francisco",
+    "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --overlay-light: rgba(255, 255, 255, 0.05);
+  --overlay-medium: rgba(255, 255, 255, 0.1);
+  --overlay-strong: rgba(255, 255, 255, 0.2);
+  --gray-light: #888;
+  --gray-medium: #e0e0e0;
+  --surface-elevated: #222;
+  --border: color-mix(in lab, var(--text) 20%, transparent);
+  --content-width: 1200px;
+  --content-padding: clamp(1rem, 4vw, 2.5rem);
+
+  --backgroundLight: var(--background-light);
+  --textTitle: var(--text-title);
+  --textBody: var(--text-body);
+  --textLight: var(--text-light);
+  --fontFamily: var(--font-family);
+  --cardBg: var(--surface-elevated);
+
+  font-family: var(--font-family);
+  color: var(--text);
+  background: var(--background);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -12,8 +60,155 @@
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: var(--content-padding);
+}
+
+.content-width {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+}
+
+.btn-base {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 2px;
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.btn-clipped {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    0 100%
+  );
+}
+
+.btn-clipped-sm {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    0 100%
+  );
+}
+
+.btn-lg {
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
+}
+
+.btn-md {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.btn-sm {
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+}
+
+.btn-secondary {
+  background: var(--overlay-light);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: middle;
+  filter: invert(1) brightness(2);
+}
+
+.btn-icon-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.btn-icon-md {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.btn-icon-lg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 #root {
   min-height: 100svh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
