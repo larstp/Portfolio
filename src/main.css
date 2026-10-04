@@ -413,6 +413,40 @@ body.header-menu-open {
   overflow: hidden;
 }
 
+.site-footer {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  padding: 40px 20px;
+  color: #868686;
+  background: linear-gradient(
+    to bottom,
+    rgba(32, 32, 32, 0) 0%,
+    var(--background) 85%
+  );
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.footer-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+}
+
 .scroll-downs {
   position: fixed;
   bottom: 40px;
@@ -486,6 +520,17 @@ body.header-menu-open {
 
   .desktop-header {
     display: flex;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    padding: 30px 16px;
+  }
+
+  .footer-copyright {
+    font-size: 13px;
+    line-height: 1.5;
   }
 }
 
