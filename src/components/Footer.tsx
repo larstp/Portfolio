@@ -1,12 +1,14 @@
+import styles from "./Footer.module.css";
+
 function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="site-footer" role="contentinfo">
-      <p className="footer-copyright">
+    <footer className={styles.siteFooter} role="contentinfo">
+      <p className={styles.footerCopyright}>
         © {currentYear}{" "}
         <a
-          className="footer-link"
+          className={styles.footerLink}
           href="https://www.edgefilm.no"
           target="_blank"
           rel="noopener noreferrer"

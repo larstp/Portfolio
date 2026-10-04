@@ -1,0 +1,65 @@
+.scrollDowns {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  z-index: 1000;
+  width: 24px;
+  height: 40px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+}
+
+.mousey {
+  width: 2px;
+  height: 25px;
+  padding: 8px 10px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 25px;
+  box-sizing: content-box;
+  opacity: 0.3;
+}
+
+.scroller {
+  display: block;
+  width: 2px;
+  height: 8px;
+  margin-inline: auto;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 25%;
+  animation: scrollIndicator 2.2s infinite;
+}
+
+@keyframes scrollIndicator {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .scrollDowns {
+    display: none;
+  }
+}

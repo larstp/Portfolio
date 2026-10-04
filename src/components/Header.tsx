@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./Header.module.css";
 
 type NavigationItem = {
   label: string;
@@ -61,10 +62,10 @@ function Header() {
 
   return (
     <>
-      <header className="mobile-header" role="banner">
+      <header className={styles.mobileHeader} role="banner">
         <Logo />
         <button
-          className={`header-menu-btn${menuOpen ? " open" : ""}`}
+          className={`${styles.headerMenuBtn}${menuOpen ? ` ${styles.open}` : ""}`}
           type="button"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
@@ -72,7 +73,7 @@ function Header() {
           onClick={() => setMenuOpen((isOpen) => !isOpen)}
         >
           <svg
-            className="menu-svg"
+            className={styles.menuSvg}
             viewBox="0 0 32 32"
             fill="none"
             stroke="currentColor"
@@ -80,17 +81,29 @@ function Header() {
             strokeLinecap="round"
             aria-hidden="true"
           >
-            <line className="menu-line top" x1="7" y1="11" x2="25" y2="11" />
-            <line className="menu-line bottom" x1="7" y1="21" x2="25" y2="21" />
+            <line
+              className={`${styles.menuLine} ${styles.top}`}
+              x1="7"
+              y1="11"
+              x2="25"
+              y2="11"
+            />
+            <line
+              className={`${styles.menuLine} ${styles.bottom}`}
+              x1="7"
+              y1="21"
+              x2="25"
+              y2="21"
+            />
           </svg>
         </button>
         <nav
-          className={`header-dropdown${menuOpen ? " open" : ""}`}
+          className={`${styles.headerDropdown}${menuOpen ? ` ${styles.open}` : ""}`}
           id="mobile-nav-menu"
           aria-label="Mobile navigation menu"
           aria-hidden={!menuOpen}
         >
-          <ul className="header-nav-list">
+          <ul className={styles.headerNavList}>
             {navigationItems.map((item) => (
               <li key={item.label}>
                 <NavigationLink item={item} onNavigate={closeMenu} showIcon />
@@ -100,10 +113,10 @@ function Header() {
         </nav>
       </header>
 
-      <header className="desktop-header" role="banner">
+      <header className={styles.desktopHeader} role="banner">
         <Logo />
-        <nav className="desktop-nav" aria-label="Main navigation">
-          <ul className="desktop-nav-list">
+        <nav aria-label="Main navigation">
+          <ul className={styles.desktopNavList}>
             {navigationItems.map((item) => (
               <li key={item.label}>
                 <NavigationLink item={item} />
@@ -119,12 +132,12 @@ function Header() {
 function Logo() {
   return (
     <a
-      className="header-logo-link"
+      className={styles.headerLogoLink}
       href="/"
       aria-label="Lars Torp Pettersen - Home"
     >
       <img
-        className="header-logo"
+        className={styles.headerLogo}
         src="/icons/echo-logo-3.svg"
         alt="Lars Torp Pettersen logo"
       />
@@ -150,15 +163,15 @@ function NavigationLink({
     >
       {showIcon && item.icon ? (
         <>
-          <img className="dropdown-icon" src={item.icon} alt={item.iconAlt} />
-          <span className="dropdown-separator" aria-hidden="true" />
+          <img
+            className={styles.dropdownIcon}
+            src={item.icon}
+            alt={item.iconAlt}
+          />
+          <span className={styles.dropdownSeparator} aria-hidden="true" />
         </>
       ) : null}
-      {showIcon ? (
-        <span className="dropdown-text">{item.label}</span>
-      ) : (
-        item.label
-      )}
+      <span>{item.label}</span>
     </a>
   );
 }

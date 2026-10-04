@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./ScrollIndicator.module.css";
 
 const TOP_THRESHOLD = 100;
 const INITIAL_DELAY = 4000;
@@ -46,11 +47,11 @@ function ScrollIndicator() {
 
   return (
     <div
-      className={`scroll-downs${isVisible ? " show" : ""}`}
+      className={`${styles.scrollDowns}${isVisible ? ` ${styles.show}` : ""}`}
       aria-hidden="true"
     >
-      <div className="mousey">
-        <div className="scroller" />
+      <div className={styles.mousey}>
+        <div className={styles.scroller} />
       </div>
     </div>
   );

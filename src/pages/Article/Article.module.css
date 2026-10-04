@@ -1,0 +1,11 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: var(--content-padding);
+}
+
+.article {
+  width: min(100%, 800px);
+  margin: 0 auto;
+}
