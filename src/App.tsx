@@ -1,16 +1,11 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import ScrollIndicator from "./components/ScrollIndicator";
+import SiteLayout from "./layouts/SiteLayout";
 import Home from "./pages/Home/Home";
 
 function App() {
   return (
-    <>
-      <Header />
-      <ScrollIndicator />
+    <SiteLayout>
       <Home />
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }
 
