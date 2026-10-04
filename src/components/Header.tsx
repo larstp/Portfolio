@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import type { MouseEvent } from "react";
+import { smoothScrollTo } from "../utils/smoothScroll";
 import styles from "./Header.module.css";
 
 type NavigationItem = {
@@ -154,12 +156,32 @@ function NavigationLink({
   onNavigate?: () => void;
   showIcon?: boolean;
 }) {
+  function handleNavigation(event: MouseEvent<HTMLAnchorElement>) {
+    if (!item.href.startsWith("#")) {
+      onNavigate?.();
+      return;
+    }
+
+    const target = document.querySelector(item.href);
+    if (!target) {
+      onNavigate?.();
+      return;
+    }
+
+    event.preventDefault();
+    const targetY = target.getBoundingClientRect().top + window.scrollY - 80;
+
+    window.history.pushState(null, "", item.href);
+    smoothScrollTo(targetY);
+    onNavigate?.();
+  }
+
   return (
     <a
       href={item.href}
       target={item.external ? "_blank" : undefined}
       rel={item.external ? "noopener noreferrer" : undefined}
-      onClick={onNavigate}
+      onClick={handleNavigation}
     >
       {showIcon && item.icon ? (
         <>

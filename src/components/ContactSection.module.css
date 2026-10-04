@@ -59,10 +59,10 @@
 .contactTextarea {
   width: 100%;
   padding: 16px 20px;
-  border: 2px solid var(--overlay-medium);
+  border: 2px solid var(--secondary);
   border-radius: 2px;
   color: var(--text);
-  background: transparent;
+  background: color-mix(in srgb, var(--form-background) 60%, transparent);
   font-family: inherit;
   font-size: 16px;
   transition:

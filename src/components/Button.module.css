@@ -40,38 +40,24 @@
   height: 24px;
   flex: 0 0 24px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .buttonOutline {
-  background: var(--accent);
+  background: var(--primary);
 }
 
 .buttonOutline::before {
-  position: absolute;
-  inset: 2px;
-  background: var(--background);
-  content: "";
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% calc(100% - 10px),
-    calc(100% - 10px) 100%,
-    0 100%
-  );
-  transition: opacity 0.3s ease;
+  display: none;
 }
 
 .buttonOutline:hover {
-  background: var(--primary);
+  background: var(--accent);
   transform: translateY(-1px) scale(1.02);
 }
 
-.buttonOutline:hover::before {
-  opacity: 0;
-}
-
 .buttonGhost {
-  background: transparent;
+  background: color-mix(in srgb, var(--secondary) 60%, transparent);
 }
 
 .buttonGhost:hover {

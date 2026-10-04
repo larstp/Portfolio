@@ -17,8 +17,9 @@
 :root {
   --background: #202020;
   --background-light: oklch(94.912% 0.00011 271.152);
-  --primary: oklch(59.184% 0.1063 179.921);
-  --accent: oklch(86.535% 0.14758 204.054 / 0.596);
+  --primary: #209d8d;
+  --accent: #3dafb7;
+  --secondary: #414141;
   --error: oklch(65.91% 0.249 13.76);
   --white: #fff;
   --text: var(--white);
@@ -28,12 +29,18 @@
   --font-family:
     "Satoshi", system-ui, -apple-system, BlinkMacSystemFont, "San Francisco",
     "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
   --overlay-light: rgba(255, 255, 255, 0.05);
   --overlay-medium: rgba(255, 255, 255, 0.1);
   --overlay-strong: rgba(255, 255, 255, 0.2);
   --gray-light: #888;
   --gray-medium: #e0e0e0;
-  --surface-elevated: #222;
+  --surface-elevated: #2b2b2b;
+  --form-background: #2b2b2b;
   --border: color-mix(in lab, var(--text) 20%, transparent);
   --content-width: 1200px;
   --content-padding: clamp(1rem, 4vw, 2.5rem);
@@ -46,6 +53,7 @@
   --cardBg: var(--surface-elevated);
 
   font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
   color: var(--text);
   background: var(--background);
   font-synthesis: none;
@@ -63,6 +71,11 @@ body {
   overflow-x: hidden;
   color: var(--text);
   background: var(--background);
+  scrollbar-gutter: stable;
+}
+
+html {
+  scrollbar-width: none;
 }
 
 a {
@@ -95,6 +108,10 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+h1 {
+  font-weight: var(--font-weight-black);
 }
 
 .content-width {
