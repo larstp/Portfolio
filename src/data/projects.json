@@ -14,6 +14,19 @@
         "repository": "https://github.com/larstp/Mimir"
       },
       "articlePath": "/projects/mimir",
+      "article": {
+        "title": "Mimir: a social media platform",
+        "image": {
+          "src": "/images/projects/mimir.webp",
+          "alt": "Detailed screenshot of the Mimir platform",
+          "caption": "Mimir is a social media platform built around CRUD operations."
+        },
+        "description": "Mimir is a social media platform created to practise working with APIs, CRUD operations, authentication, and responsive interfaces. The project focuses on creating a clear experience while handling changing user-generated content.",
+        "improvement": "Improve the responsive layout and accessibility of the main platform views.",
+        "improvementReason": "The project can present its content more clearly on smaller screens and provide stronger interaction feedback for keyboard and assistive technology users.",
+        "role": "Frontend developer",
+        "process": "The project involved planning the interface, connecting the frontend to the API, building reusable UI patterns, and testing the main user flows."
+      },
       "featured": true,
       "dateCreated": "2025-11-10",
       "status": "active"
@@ -22,12 +35,29 @@
       "id": "butta",
       "title": "Butta",
       "description": "A JavaScript framework project demonstrating component-driven interfaces and practical front-end problem solving.",
+      "image": {
+        "src": "/images/projects/Butta.webp",
+        "alt": "Detailed screenshot of the Butta landing page."
+      },
       "technologies": ["html", "css", "javascript", "react"],
       "links": {
         "live": "https://butta.larstp.com",
         "repository": "https://github.com/larstp/Butta"
       },
       "articlePath": "/projects/butta",
+      "article": {
+        "title": "Butta: a JavaScript framework project",
+        "image": {
+          "src": "/images/missing.svg",
+          "alt": "Butta project article image coming soon",
+          "caption": "The Butta project image will be added here."
+        },
+        "description": "Butta is a JavaScript framework project created to demonstrate component-driven interfaces, structured application code, and practical frontend problem solving.",
+        "improvement": "Improve the project structure and refine the responsive user experience.",
+        "improvementReason": "A clearer component structure and more consistent responsive behavior make the project easier to maintain and present professionally.",
+        "role": "Frontend developer",
+        "process": "The project focused on translating requirements into reusable components, organizing the interface, and refining the experience through testing and iteration."
+      },
       "featured": true,
       "dateCreated": "2025-11-01",
       "status": "active"
@@ -36,12 +66,29 @@
       "id": "barter",
       "title": "Barter",
       "description": "A semester project focused on creating a clear and accessible web experience for a online auction house.",
+      "image": {
+        "src": "/images/projects/Barter.webp",
+        "alt": "Detailed screenshot of the Barter landing page."
+      },
       "technologies": ["html", "css", "javascript", "typescript"],
       "links": {
         "live": "https://barter.larstp.com",
         "repository": "https://github.com/larstp/Barter"
       },
       "articlePath": "/projects/barter",
+      "article": {
+        "title": "Barter: an online auction house",
+        "image": {
+          "src": "/images/projects/Barter.webp",
+          "alt": "Barter project article image coming soon",
+          "caption": "The Barter project image will be added here."
+        },
+        "description": "Barter is a semester project for an online auction house. The experience is designed to make browsing listings, understanding item information, and taking action feel clear and accessible.",
+        "improvement": "Improve accessibility and clarity across the auction browsing experience.",
+        "improvementReason": "Clearer hierarchy, stronger contrast, and more deliberate interaction states help users understand listings and navigate the service with confidence.",
+        "role": "Frontend developer",
+        "process": "The project combined interface planning, responsive implementation, content hierarchy, and iterative refinement of the core auction flows."
+      },
       "featured": true,
       "dateCreated": "2025-10-01",
       "status": "active"

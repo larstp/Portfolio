@@ -136,6 +136,10 @@
   color: var(--accent);
 }
 
+.headerNavList a.active {
+  color: var(--accent);
+}
+
 .dropdownIcon {
   width: 1.3em;
   height: 1.3em;
@@ -200,7 +204,8 @@
 }
 
 .desktopNavList a:hover::after,
-.desktopNavList a:focus-visible::after {
+.desktopNavList a:focus-visible::after,
+.desktopNavList a.active::after {
   opacity: 1;
   transform: scaleX(1);
 }

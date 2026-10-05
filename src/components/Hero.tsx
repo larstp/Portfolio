@@ -1,7 +1,23 @@
+import type { MouseEvent } from "react";
+import { smoothScrollTo } from "../utils/smoothScroll";
 import { ButtonLink } from "./Button";
 import styles from "./Hero.module.css";
 
 function Hero() {
+  function handleContactClick(event: MouseEvent<HTMLAnchorElement>) {
+    const contactSection = document.getElementById("contact");
+    if (!contactSection) {
+      return;
+    }
+
+    event.preventDefault();
+    const targetY =
+      contactSection.getBoundingClientRect().top + window.scrollY - 80;
+
+    window.history.pushState(null, "", "#contact");
+    smoothScrollTo(targetY);
+  }
+
   return (
     <section
       className={styles.heroSection}
@@ -44,7 +60,12 @@ function Hero() {
               />
             </p>
             <div className={styles.actions}>
-              <ButtonLink variant="outline" size="lg" href="#contact">
+              <ButtonLink
+                variant="outline"
+                size="lg"
+                href="#contact"
+                onClick={handleContactClick}
+              >
                 <img
                   src="/icons/material-symbols_mail-rounded.svg"
                   alt=""

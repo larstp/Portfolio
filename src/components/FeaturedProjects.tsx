@@ -20,9 +20,7 @@ function FeaturedProjects() {
         </div>
         <div className={styles.grid} role="list">
           {projects.map((project) => (
-            <div role="listitem" key={project.id}>
-              <ProjectCard project={project} />
-            </div>
+            <ProjectCard project={project} key={project.id} />
           ))}
         </div>
       </div>

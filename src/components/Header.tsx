@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { MouseEvent } from "react";
+import { useLocation } from "react-router-dom";
 import { smoothScrollTo } from "../utils/smoothScroll";
 import styles from "./Header.module.css";
 
@@ -41,6 +42,8 @@ const navigationItems: NavigationItem[] = [
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -57,6 +60,50 @@ function Header() {
       document.body.classList.remove("header-menu-open");
     };
   }, [menuOpen]);
+
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      return;
+    }
+
+    const sectionItems = navigationItems.filter((item) =>
+      item.href.startsWith("#"),
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort(
+            (first, second) =>
+              second.intersectionRatio - first.intersectionRatio,
+          )[0];
+
+        if (visibleSection) {
+          setActiveSection(visibleSection.target.id);
+        }
+      },
+      {
+        threshold: [0.1, 0.25, 0.5, 0.75, 1],
+        rootMargin: "-80px 0px -40% 0px",
+      },
+    );
+
+    sectionItems.forEach((item) => {
+      const section = document.querySelector(item.href);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
+  const currentActiveSection =
+    location.pathname !== "/"
+      ? location.pathname.startsWith("/projects")
+        ? "Projects"
+        : null
+      : activeSection;
 
   function closeMenu() {
     setMenuOpen(false);
@@ -108,7 +155,15 @@ function Header() {
           <ul className={styles.headerNavList}>
             {navigationItems.map((item) => (
               <li key={item.label}>
-                <NavigationLink item={item} onNavigate={closeMenu} showIcon />
+                <NavigationLink
+                  item={item}
+                  active={
+                    currentActiveSection === item.label ||
+                    currentActiveSection === item.href.slice(1)
+                  }
+                  onNavigate={closeMenu}
+                  showIcon
+                />
               </li>
             ))}
           </ul>
@@ -121,7 +176,13 @@ function Header() {
           <ul className={styles.desktopNavList}>
             {navigationItems.map((item) => (
               <li key={item.label}>
-                <NavigationLink item={item} />
+                <NavigationLink
+                  item={item}
+                  active={
+                    currentActiveSection === item.label ||
+                    currentActiveSection === item.href.slice(1)
+                  }
+                />
               </li>
             ))}
           </ul>
@@ -149,10 +210,12 @@ function Logo() {
 
 function NavigationLink({
   item,
+  active = false,
   onNavigate,
   showIcon = false,
 }: {
   item: NavigationItem;
+  active?: boolean;
   onNavigate?: () => void;
   showIcon?: boolean;
 }) {
@@ -178,6 +241,7 @@ function NavigationLink({
 
   return (
     <a
+      className={active ? styles.active : undefined}
       href={item.href}
       target={item.external ? "_blank" : undefined}
       rel={item.external ? "noopener noreferrer" : undefined}
