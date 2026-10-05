@@ -1,0 +1,249 @@
+{
+  "technologies": {
+    "html": {
+      "name": "HTML",
+      "color": "#E34F26",
+      "category": "markup"
+    },
+    "css": {
+      "name": "CSS",
+      "color": "#1572B6",
+      "category": "styling"
+    },
+    "javascript": {
+      "name": "JavaScript",
+      "color": "#F7DF1E",
+      "category": "programming"
+    },
+    "react": {
+      "name": "React",
+      "color": "#61DAFB",
+      "category": "framework"
+    },
+    "vue": {
+      "name": "Vue.js",
+      "color": "#4FC08D",
+      "category": "framework"
+    },
+    "tailwind": {
+      "name": "Tailwind CSS",
+      "color": "#38B2AC",
+      "category": "styling"
+    },
+    "sass": {
+      "name": "Sass",
+      "color": "#CC6699",
+      "category": "styling"
+    },
+    "typescript": {
+      "name": "TypeScript",
+      "color": "#3178C6",
+      "category": "programming"
+    },
+    "nodejs": {
+      "name": "Node.js",
+      "color": "#339933",
+      "category": "runtime"
+    },
+    "express": {
+      "name": "Express",
+      "color": "#000000",
+      "category": "framework"
+    },
+    "mongodb": {
+      "name": "MongoDB",
+      "color": "#47A248",
+      "category": "database"
+    },
+    "postgresql": {
+      "name": "PostgreSQL",
+      "color": "#336791",
+      "category": "database"
+    },
+    "vite": {
+      "name": "Vite",
+      "color": "#646CFF",
+      "category": "tooling"
+    },
+    "webpack": {
+      "name": "Webpack",
+      "color": "#8DD6F9",
+      "category": "tooling"
+    },
+    "figma": {
+      "name": "Figma",
+      "color": "#F24E1E",
+      "category": "design"
+    },
+    "photoshop": {
+      "name": "Photoshop",
+      "color": "#31A8FF",
+      "category": "design"
+    },
+    "git": {
+      "name": "Git",
+      "color": "#F05032",
+      "category": "tooling"
+    },
+    "netlify": {
+      "name": "Netlify",
+      "color": "#00C7B7",
+      "category": "deployment"
+    },
+    "vercel": {
+      "name": "Vercel",
+      "color": "#000000",
+      "category": "deployment"
+    },
+    "github": {
+      "name": "GitHub",
+      "color": "#181717",
+      "category": "tooling"
+    },
+    "vscode": {
+      "name": "VS Code",
+      "color": "#007ACC",
+      "category": "tooling"
+    },
+    "docker": {
+      "name": "Docker",
+      "color": "#2496ED",
+      "category": "tooling"
+    },
+    "aws": {
+      "name": "AWS",
+      "color": "#232F3E",
+      "category": "cloud"
+    },
+    "firebase": {
+      "name": "Firebase",
+      "color": "#FFCA28",
+      "category": "backend"
+    },
+    "supabase": {
+      "name": "Supabase",
+      "color": "#3ECF8E",
+      "category": "backend"
+    },
+    "nextjs": {
+      "name": "Next.js",
+      "color": "#000000",
+      "category": "framework"
+    },
+    "nuxtjs": {
+      "name": "Nuxt.js",
+      "color": "#00DC82",
+      "category": "framework"
+    },
+    "svelte": {
+      "name": "Svelte",
+      "color": "#FF3E00",
+      "category": "framework"
+    },
+    "angular": {
+      "name": "Angular",
+      "color": "#DD0031",
+      "category": "framework"
+    },
+    "bootstrap": {
+      "name": "Bootstrap",
+      "color": "#7952B3",
+      "category": "styling"
+    },
+    "materialui": {
+      "name": "Material-UI",
+      "color": "#0081CB",
+      "category": "styling"
+    },
+    "styledcomponents": {
+      "name": "Styled Components",
+      "color": "#DB7093",
+      "category": "styling"
+    },
+    "python": {
+      "name": "Python",
+      "color": "#3776AB",
+      "category": "programming"
+    },
+    "java": {
+      "name": "Java",
+      "color": "#ED8B00",
+      "category": "programming"
+    },
+    "csharp": {
+      "name": "C#",
+      "color": "#239120",
+      "category": "programming"
+    },
+    "php": {
+      "name": "PHP",
+      "color": "#777BB4",
+      "category": "programming"
+    },
+    "mysql": {
+      "name": "MySQL",
+      "color": "#4479A1",
+      "category": "database"
+    },
+    "sqlite": {
+      "name": "SQLite",
+      "color": "#003B57",
+      "category": "database"
+    },
+    "redis": {
+      "name": "Redis",
+      "color": "#DC382D",
+      "category": "database"
+    },
+    "graphql": {
+      "name": "GraphQL",
+      "color": "#E10098",
+      "category": "api"
+    },
+    "rest": {
+      "name": "REST API",
+      "color": "#009639",
+      "category": "api"
+    },
+    "jest": {
+      "name": "Jest",
+      "color": "#C21325",
+      "category": "testing"
+    },
+    "cypress": {
+      "name": "Cypress",
+      "color": "#17202C",
+      "category": "testing"
+    },
+    "eslint": {
+      "name": "ESLint",
+      "color": "#4B32C3",
+      "category": "tooling"
+    },
+    "prettier": {
+      "name": "Prettier",
+      "color": "#F7B93E",
+      "category": "tooling"
+    },
+    "illustrator": {
+      "name": "Illustrator",
+      "color": "#FF9A00",
+      "category": "design"
+    },
+    "aftereffects": {
+      "name": "After Effects",
+      "color": "#9999FF",
+      "category": "design"
+    },
+    "premiere": {
+      "name": "Premiere Pro",
+      "color": "#9999FF",
+      "category": "design"
+    },
+    "blender": {
+      "name": "Blender",
+      "color": "#F5792A",
+      "category": "design"
+    }
+  }
+}

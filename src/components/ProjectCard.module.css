@@ -1,0 +1,96 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--surface-elevated);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%
+  );
+}
+
+.image,
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.image {
+  display: block;
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  display: grid;
+  place-items: center;
+  color: var(--text-light);
+  background: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.title a {
+  color: var(--text-title);
+  text-decoration: none;
+}
+
+.title a:hover {
+  color: var(--accent);
+}
+
+.description {
+  margin-top: 0.75rem;
+  color: var(--text-body);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.technology {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--technology-color);
+  border-radius: 999px;
+  color: var(--technology-color);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.action {
+  flex: 1;
+}
+
+@media (max-width: 500px) {
+  .actions {
+    flex-direction: column;
+  }
+}
