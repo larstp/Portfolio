@@ -1,5 +1,6 @@
 import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
+import SectionHeader from "./SectionHeader";
 import styles from "./FeaturedProjects.module.css";
 
 function FeaturedProjects() {
@@ -10,14 +11,12 @@ function FeaturedProjects() {
       aria-labelledby="projects-heading"
     >
       <div className="content-width">
-        <div className={styles.introduction}>
-          <p className={styles.eyebrow}>Selected work</p>
-          <h2 id="projects-heading">Featured projects</h2>
-          <p>
-            A selection of projects that show how I approach design, structure,
-            and front-end development.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Selected work"
+          title="Featured projects"
+          titleId="projects-heading"
+          description="A selection of projects that show how I approach design, structure, and front-end development."
+        />
         <div className={styles.grid} role="list">
           {projects.map((project) => (
             <ProjectCard project={project} key={project.id} />

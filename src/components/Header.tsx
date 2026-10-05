@@ -1,49 +1,18 @@
 import { useEffect, useState } from "react";
 import type { MouseEvent } from "react";
 import { useLocation } from "react-router-dom";
+import { navigationItems } from "../lib/constants/navigation";
+import { useActiveSection } from "../hooks/useActiveSection";
 import { smoothScrollTo } from "../utils/smoothScroll";
 import styles from "./Header.module.css";
 
-type NavigationItem = {
-  label: string;
-  href: string;
-  icon?: string;
-  iconAlt?: string;
-  external?: boolean;
-};
-
-const navigationItems: NavigationItem[] = [
-  {
-    label: "Projects",
-    href: "#projects",
-    icon: "/icons/streamline-ultimate_responsive-design-bold.svg",
-    iconAlt: "",
-  },
-  {
-    label: "Skills",
-    href: "#skills",
-    icon: "/icons/streamline-ultimate_space-rocket-earth.svg",
-    iconAlt: "",
-  },
-  {
-    label: "Contact",
-    href: "#contact",
-    icon: "/icons/material-symbols_mail-rounded.svg",
-    iconAlt: "",
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/larstp",
-    icon: "/icons/mdi_github.svg",
-    iconAlt: "",
-    external: true,
-  },
-];
-
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<string | null>(null);
   const location = useLocation();
+  const observedSection = useActiveSection(
+    ["projects", "skills", "contact"],
+    location.pathname === "/",
+  );
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -61,49 +30,12 @@ function Header() {
     };
   }, [menuOpen]);
 
-  useEffect(() => {
-    if (location.pathname !== "/") {
-      return;
-    }
-
-    const sectionItems = navigationItems.filter((item) =>
-      item.href.startsWith("#"),
-    );
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSection = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort(
-            (first, second) =>
-              second.intersectionRatio - first.intersectionRatio,
-          )[0];
-
-        if (visibleSection) {
-          setActiveSection(visibleSection.target.id);
-        }
-      },
-      {
-        threshold: [0.1, 0.25, 0.5, 0.75, 1],
-        rootMargin: "-80px 0px -40% 0px",
-      },
-    );
-
-    sectionItems.forEach((item) => {
-      const section = document.querySelector(item.href);
-      if (section) {
-        observer.observe(section);
-      }
-    });
-
-    return () => observer.disconnect();
-  }, [location.pathname]);
-
   const currentActiveSection =
     location.pathname !== "/"
       ? location.pathname.startsWith("/projects")
         ? "Projects"
         : null
-      : activeSection;
+      : observedSection;
 
   function closeMenu() {
     setMenuOpen(false);
@@ -214,7 +146,7 @@ function NavigationLink({
   onNavigate,
   showIcon = false,
 }: {
-  item: NavigationItem;
+  item: (typeof navigationItems)[number];
   active?: boolean;
   onNavigate?: () => void;
   showIcon?: boolean;

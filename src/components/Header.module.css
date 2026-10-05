@@ -3,8 +3,8 @@
   z-index: 1000;
   background: linear-gradient(
     to bottom,
-    var(--background) 15%,
-    rgba(32, 32, 32, 0) 100%
+    var(--background) 25%,
+    rgba(32, 32, 32, 0) 90%
   );
 }
 

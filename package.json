@@ -1,11 +1,12 @@
 {
-  "name": "portfolio",
+  "name": "larstp portfolio website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --pretty false",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -1,0 +1,29 @@
+.header {
+  width: min(100%, 620px);
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.header h2 {
+  margin: 0;
+  color: var(--text-title);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: var(--font-weight-black);
+  line-height: 0.95;
+}
+
+.description {
+  max-width: 36rem;
+  margin-top: 1rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}

@@ -14,22 +14,6 @@
   width: 100%;
   padding: 80px 20px 0px;
   margin: 0 auto;
-  text-align: center;
-}
-
-.contactHeading {
-  margin-bottom: 20px;
-  color: var(--text-title);
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.contactSubheading {
-  max-width: 600px;
-  margin: 0 auto 60px;
-  color: var(--text-light);
-  font-size: 1.1rem;
-  line-height: 1.6;
   text-align: left;
 }
 

@@ -3,45 +3,17 @@
   padding: clamp(5rem, 10vw, 10rem) 0;
 }
 
-.introduction {
-  max-width: 620px;
-  margin-bottom: 2.5rem;
-}
-
-.eyebrow {
-  margin-bottom: 0.75rem;
-  color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.introduction h2 {
-  margin: 0;
-  color: var(--text-title);
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: var(--font-weight-black);
-  line-height: 0.95;
-}
-
-.introduction p:last-child {
-  max-width: 36rem;
-  margin-top: 1rem;
-  color: var(--text-body);
-  line-height: 1.6;
-}
-
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
 }
 
-@media (max-width: 1000px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.grid > * {
+  display: flex;
+  flex: 1 1 300px;
+  max-width: 360px;
 }
 
 @media (max-width: 640px) {
@@ -49,7 +21,8 @@
     padding-block: 4rem;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  .grid > * {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }

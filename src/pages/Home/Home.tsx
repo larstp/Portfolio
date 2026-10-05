@@ -1,6 +1,7 @@
 import ContactSection from "../../components/ContactSection";
 import FeaturedProjects from "../../components/FeaturedProjects";
 import Hero from "../../components/Hero";
+import SkillsSection from "../../components/SkillsSection";
 import ScrollIndicator from "../../components/ScrollIndicator";
 import styles from "./Home.module.css";
 
@@ -11,6 +12,7 @@ function Home() {
       <main className={styles.page}>
         <Hero />
         <FeaturedProjects />
+        <SkillsSection />
         <ContactSection />
       </main>
     </>

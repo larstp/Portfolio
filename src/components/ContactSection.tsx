@@ -1,7 +1,9 @@
 import { useState } from "react";
 import type { SyntheticEvent } from "react";
+import { submitContactForm } from "../lib/services/web3forms";
 import { Button, ButtonLink } from "./Button";
 import styles from "./ContactSection.module.css";
+import SectionHeader from "./SectionHeader";
 
 type SubmissionState = "idle" | "sending" | "success" | "error";
 
@@ -54,19 +56,9 @@ function ContactSection() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    formData.set("access_key", accessKey);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-      const data = (await response.json()) as { success?: boolean };
-
-      if (!response.ok || !data.success) {
-        throw new Error("Form submission failed");
-      }
-
+      await submitContactForm(formData, accessKey);
       form.reset();
       setSubmissionState("success");
     } catch {
@@ -81,14 +73,12 @@ function ContactSection() {
       aria-labelledby="contact-heading"
     >
       <div className="content-width">
-        <h2 className={styles.contactHeading} id="contact-heading">
-          Say hello!
-        </h2>
-        <p className={styles.contactSubheading}>
-          Do you have any projects you would be interested in collaborating on?
-          Any tips or tricks, or maybe a good book recommendation? Feel free to
-          send me a message!
-        </p>
+        <SectionHeader
+          eyebrow="Get in touch"
+          title="Say hello!"
+          titleId="contact-heading"
+          description="Do you have any projects you would be interested in collaborating on? Any tips or tricks, or maybe a good book recommendation? Feel free to send me a message!"
+        />
 
         <div className={styles.contactContent}>
           <div className={styles.contactFormContainer}>
