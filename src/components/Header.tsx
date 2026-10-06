@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { MouseEvent } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { navigationItems } from "../lib/constants/navigation";
 import { useActiveSection } from "../hooks/useActiveSection";
 import { smoothScrollTo } from "../utils/smoothScroll";
@@ -151,6 +151,9 @@ function NavigationLink({
   onNavigate?: () => void;
   showIcon?: boolean;
 }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   function handleNavigation(event: MouseEvent<HTMLAnchorElement>) {
     if (!item.href.startsWith("#")) {
       onNavigate?.();
@@ -159,7 +162,22 @@ function NavigationLink({
 
     const target = document.querySelector(item.href);
     if (!target) {
-      onNavigate?.();
+      if (location.pathname !== "/") {
+        event.preventDefault();
+        onNavigate?.();
+        navigate({ pathname: "/", hash: item.href });
+
+        window.setTimeout(() => {
+          const homeTarget = document.querySelector(item.href);
+          if (homeTarget) {
+            const targetY =
+              homeTarget.getBoundingClientRect().top + window.scrollY - 80;
+            smoothScrollTo(targetY);
+          }
+        }, 50);
+      } else {
+        onNavigate?.();
+      }
       return;
     }
 

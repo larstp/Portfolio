@@ -1,9 +1,13 @@
 .container {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 50%;
+  width: min(100%, 1440px);
+  height: 100%;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
+  transform: translateX(-50%);
 }
 
 .layer {
@@ -31,7 +35,8 @@
 
 @media (max-width: 700px) {
   .layer {
-    width: 125vw;
+    right: 1rem;
+    width: calc(100% - 2rem);
     opacity: 0.08;
   }
 }

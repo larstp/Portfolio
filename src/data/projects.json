@@ -15,16 +15,22 @@
       },
       "articlePath": "/projects/mimir",
       "article": {
-        "title": "Mimir: a social media platform",
+        "title": "Mimir",
+        "subheading": "A social media platform.",
+        "logo": {
+          "src": "/images/projects/logos/Mimir.svg",
+          "alt": "Mimir logo"
+        },
         "image": {
           "src": "/images/projects/mimir.webp",
           "alt": "Detailed screenshot of the Mimir platform",
           "caption": "Mimir is a social media platform built around CRUD operations."
         },
-        "description": "Mimir is a social media platform created to practise working with APIs, CRUD operations, authentication, and responsive interfaces. The project focuses on creating a clear experience while handling changing user-generated content.",
+        "description": "A social media platform",
         "improvement": "Improve the responsive layout and accessibility of the main platform views.",
         "improvementReason": "The project can present its content more clearly on smaller screens and provide stronger interaction feedback for keyboard and assistive technology users.",
-        "role": "Frontend developer",
+        "pullRequest": null,
+        "roles": ["Frontend developer", "UI implementation", "API integration"],
         "process": "The project involved planning the interface, connecting the frontend to the API, building reusable UI patterns, and testing the main user flows."
       },
       "featured": true,
@@ -46,16 +52,26 @@
       },
       "articlePath": "/projects/butta",
       "article": {
-        "title": "Butta: a JavaScript framework project",
+        "title": "Butta",
+        "subheading": "Online auction house",
+        "logo": {
+          "src": "/images/projects/logos/Butta.svg",
+          "alt": "Butta logo"
+        },
         "image": {
-          "src": "/images/missing.svg",
+          "src": "/images/projects/Butta.webp",
           "alt": "Butta project article image coming soon",
           "caption": "The Butta project image will be added here."
         },
         "description": "Butta is a JavaScript framework project created to demonstrate component-driven interfaces, structured application code, and practical frontend problem solving.",
         "improvement": "Improve the project structure and refine the responsive user experience.",
         "improvementReason": "A clearer component structure and more consistent responsive behavior make the project easier to maintain and present professionally.",
-        "role": "Frontend developer",
+        "pullRequest": null,
+        "roles": [
+          "Frontend developer",
+          "Component architecture",
+          "Responsive implementation"
+        ],
         "process": "The project focused on translating requirements into reusable components, organizing the interface, and refining the experience through testing and iteration."
       },
       "featured": true,
@@ -77,7 +93,12 @@
       },
       "articlePath": "/projects/barter",
       "article": {
-        "title": "Barter: an online auction house",
+        "title": "Barter",
+        "subheading": "An online auction house",
+        "logo": {
+          "src": "/images/projects/logos/Barter.svg",
+          "alt": "Barter logo"
+        },
         "image": {
           "src": "/images/projects/Barter.webp",
           "alt": "Barter project article image coming soon",
@@ -86,7 +107,8 @@
         "description": "Barter is a semester project for an online auction house. The experience is designed to make browsing listings, understanding item information, and taking action feel clear and accessible.",
         "improvement": "Improve accessibility and clarity across the auction browsing experience.",
         "improvementReason": "Clearer hierarchy, stronger contrast, and more deliberate interaction states help users understand listings and navigate the service with confidence.",
-        "role": "Frontend developer",
+        "pullRequest": null,
+        "roles": ["Frontend developer", "UI UX Designer"],
         "process": "The project combined interface planning, responsive implementation, content hierarchy, and iterative refinement of the core auction flows."
       },
       "featured": true,

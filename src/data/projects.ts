@@ -6,6 +6,11 @@ export type ProjectTechnology = keyof typeof technologies;
 
 export type ProjectArticle = {
   title: string;
+  subheading: string;
+  logo?: {
+    src: string;
+    alt: string;
+  };
   image?: {
     src: string;
     alt: string;
@@ -14,7 +19,8 @@ export type ProjectArticle = {
   description: string;
   improvement: string;
   improvementReason: string;
-  role: string;
+  pullRequest?: string | null;
+  roles: string[];
   process: string;
 };
 
