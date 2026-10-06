@@ -76,47 +76,58 @@ function Article() {
             />
           </span>
         </Link>
-        <p className={styles.eyebrow}>Project article</p>
-        <h1>{article.title}</h1>
-        <h3 className={styles.subheading}>{article.subheading}</h3>
-        <div className={styles.articleActions}>
-          <Button
-            className={styles.articleAction}
-            variant="ghost"
-            size="sm"
-            onClick={copyLink}
-          >
-            <img
-              src="/icons/material-symbols_link-rounded.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            {copied ? "Link copied" : "Copy link"}
-          </Button>
-          <ButtonLink
-            variant="outline"
-            size="sm"
-            className={styles.articleAction}
-            href={project.links.live}
-            external
-          >
-            <img
-              src="/icons/streamline-ultimate_space-rocket-earth-bold.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            Live site
-          </ButtonLink>
-          <ButtonLink
-            variant="ghost"
-            size="sm"
-            className={styles.articleAction}
-            href={`${project.links.repository}/blob/main/README.md`}
-            external
-          >
-            <img src="/icons/mdi_github.svg" alt="" aria-hidden="true" />
-            README.md
-          </ButtonLink>
+        <div className={styles.articleHeader}>
+          <div className={styles.articleHeading}>
+            <p className={styles.eyebrow}>Project article</p>
+            <h1>{article.title}</h1>
+            <h4 className={styles.subheading}>{article.subheading}</h4>
+          </div>
+          <aside className={styles.roleAside} aria-label="My role">
+            <ul className={styles.roleList}>
+              {article.roles.map((role) => (
+                <li key={role}>{role}</li>
+              ))}
+            </ul>
+          </aside>
+          <div className={styles.articleActions}>
+            <Button
+              className={styles.articleAction}
+              variant="ghost"
+              size="sm"
+              onClick={copyLink}
+            >
+              <img
+                src="/icons/material-symbols_link-rounded.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              {copied ? "Link copied" : "Copy link"}
+            </Button>
+            <ButtonLink
+              variant="outline"
+              size="sm"
+              className={styles.articleAction}
+              href={project.links.live}
+              external
+            >
+              <img
+                src="/icons/streamline-ultimate_space-rocket-earth-bold.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              Live site
+            </ButtonLink>
+            <ButtonLink
+              variant="ghost"
+              size="sm"
+              className={styles.articleAction}
+              href={project.links.repository}
+              external
+            >
+              <img src="/icons/mdi_github.svg" alt="" aria-hidden="true" />
+              Repo
+            </ButtonLink>
+          </div>
         </div>
 
         {article.image ? (
@@ -132,12 +143,6 @@ function Article() {
 
         <div className={styles.content}>
           <p>{article.description}</p>
-          <h2>My role</h2>
-          <ul className={styles.roleList}>
-            {article.roles.map((role) => (
-              <li key={role}>{role}</li>
-            ))}
-          </ul>
           <h2>Process</h2>
           <p>{article.process}</p>
           <h2>Improvement</h2>
