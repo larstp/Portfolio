@@ -1,0 +1,43 @@
+.container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(1000px, 100vw);
+  height: 100%;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+  will-change: transform;
+}
+
+.bottom {
+  z-index: 1;
+  background-image: url("/icons/echo-logo-bottom.svg");
+}
+
+.top {
+  z-index: 2;
+  background-image: url("/icons/echo-logo-top.svg");
+}
+
+@media (max-width: 700px) {
+  .layer {
+    width: 125vw;
+    opacity: 0.08;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layer {
+    will-change: auto;
+  }
+}
