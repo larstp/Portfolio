@@ -1,0 +1,90 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 0;
+  border-radius: 0;
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%
+  );
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.button > * {
+  position: relative;
+  z-index: 1;
+}
+
+.button > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button > span > img {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.buttonOutline {
+  background: var(--primary);
+}
+
+.buttonOutline::before {
+  display: none;
+}
+
+.buttonOutline:hover {
+  background: var(--accent);
+  transform: translateY(-1px) scale(1.02);
+}
+
+.buttonGhost {
+  background: color-mix(in srgb, var(--secondary) 60%, transparent);
+}
+
+.buttonGhost:hover {
+  background: var(--primary);
+  transform: translateY(-1px) scale(1.02);
+}
+
+.buttonSm {
+  min-height: 2.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+}
+
+.buttonMd {
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.buttonLg {
+  min-height: 3.5rem;
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
+}
+
+.button :global(.btn-icon-sm),
+.button :global(.btn-icon-md),
+.button :global(.btn-icon-lg) {
+  filter: invert(1) brightness(2);
+}

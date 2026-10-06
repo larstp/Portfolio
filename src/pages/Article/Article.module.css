@@ -1,0 +1,93 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: var(--content-padding);
+}
+
+.article {
+  width: min(100%, 800px);
+  margin: 0 auto;
+}
+
+.backLink,
+.eyebrow {
+  color: var(--text-light);
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 3rem;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.article h1 {
+  max-width: 14ch;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  line-height: 0.95;
+}
+
+.articleActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.heroImage,
+.imagePlaceholder {
+  width: 100%;
+  margin: 4rem 0 0;
+}
+
+.heroImage img,
+.imagePlaceholder {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  display: grid;
+  place-items: center;
+  color: var(--text-light);
+  background: var(--secondary);
+}
+
+.heroImage figcaption {
+  margin-top: 0.75rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.content {
+  max-width: 680px;
+  margin-top: 3rem;
+  color: var(--text-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.content h2 {
+  margin-top: 2.5rem;
+  color: var(--text-title);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.content p + p {
+  margin-top: 1rem;
+}

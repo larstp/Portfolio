@@ -1,0 +1,28 @@
+.section {
+  width: 100%;
+  padding: clamp(5rem, 10vw, 10rem) 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.grid > * {
+  display: flex;
+  flex: 1 1 300px;
+  max-width: 360px;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-block: 4rem;
+  }
+
+  .grid > * {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "projects": [
+    {
+      "id": "mimir",
+      "title": "Mimir",
+      "description": "Mimir is a social media platform I built to explore CRUD operations and responsive front-end development.",
+      "image": {
+        "src": "/images/projects/mimir.webp",
+        "alt": "Mimir social media platform screenshot"
+      },
+      "technologies": ["html", "css", "javascript", "typescript"],
+      "links": {
+        "live": "https://mimir.larstp.com",
+        "repository": "https://github.com/larstp/Mimir"
+      },
+      "articlePath": "/projects/mimir",
+      "article": {
+        "title": "Mimir: a social media platform",
+        "image": {
+          "src": "/images/projects/mimir.webp",
+          "alt": "Detailed screenshot of the Mimir platform",
+          "caption": "Mimir is a social media platform built around CRUD operations."
+        },
+        "description": "Mimir is a social media platform created to practise working with APIs, CRUD operations, authentication, and responsive interfaces. The project focuses on creating a clear experience while handling changing user-generated content.",
+        "improvement": "Improve the responsive layout and accessibility of the main platform views.",
+        "improvementReason": "The project can present its content more clearly on smaller screens and provide stronger interaction feedback for keyboard and assistive technology users.",
+        "role": "Frontend developer",
+        "process": "The project involved planning the interface, connecting the frontend to the API, building reusable UI patterns, and testing the main user flows."
+      },
+      "featured": true,
+      "dateCreated": "2025-11-10",
+      "status": "active"
+    },
+    {
+      "id": "butta",
+      "title": "Butta",
+      "description": "A JavaScript framework project demonstrating component-driven interfaces and practical front-end problem solving.",
+      "image": {
+        "src": "/images/projects/Butta.webp",
+        "alt": "Detailed screenshot of the Butta landing page."
+      },
+      "technologies": ["html", "css", "javascript", "react"],
+      "links": {
+        "live": "https://butta.larstp.com",
+        "repository": "https://github.com/larstp/Butta"
+      },
+      "articlePath": "/projects/butta",
+      "article": {
+        "title": "Butta: a JavaScript framework project",
+        "image": {
+          "src": "/images/missing.svg",
+          "alt": "Butta project article image coming soon",
+          "caption": "The Butta project image will be added here."
+        },
+        "description": "Butta is a JavaScript framework project created to demonstrate component-driven interfaces, structured application code, and practical frontend problem solving.",
+        "improvement": "Improve the project structure and refine the responsive user experience.",
+        "improvementReason": "A clearer component structure and more consistent responsive behavior make the project easier to maintain and present professionally.",
+        "role": "Frontend developer",
+        "process": "The project focused on translating requirements into reusable components, organizing the interface, and refining the experience through testing and iteration."
+      },
+      "featured": true,
+      "dateCreated": "2025-11-01",
+      "status": "active"
+    },
+    {
+      "id": "barter",
+      "title": "Barter",
+      "description": "A semester project focused on creating a clear and accessible web experience for a online auction house.",
+      "image": {
+        "src": "/images/projects/Barter.webp",
+        "alt": "Detailed screenshot of the Barter landing page."
+      },
+      "technologies": ["html", "css", "javascript", "typescript"],
+      "links": {
+        "live": "https://barter.larstp.com",
+        "repository": "https://github.com/larstp/Barter"
+      },
+      "articlePath": "/projects/barter",
+      "article": {
+        "title": "Barter: an online auction house",
+        "image": {
+          "src": "/images/projects/Barter.webp",
+          "alt": "Barter project article image coming soon",
+          "caption": "The Barter project image will be added here."
+        },
+        "description": "Barter is a semester project for an online auction house. The experience is designed to make browsing listings, understanding item information, and taking action feel clear and accessible.",
+        "improvement": "Improve accessibility and clarity across the auction browsing experience.",
+        "improvementReason": "Clearer hierarchy, stronger contrast, and more deliberate interaction states help users understand listings and navigate the service with confidence.",
+        "role": "Frontend developer",
+        "process": "The project combined interface planning, responsive implementation, content hierarchy, and iterative refinement of the core auction flows."
+      },
+      "featured": true,
+      "dateCreated": "2025-10-01",
+      "status": "active"
+    },
+    {
+      "id": "e-co",
+      "title": "E-Co",
+      "description": "A first-year e-commerce project built with HTML, CSS, and JavaScript.",
+      "image": {
+        "src": "/images/projects/E-Co.webp",
+        "alt": "Screenshot of the E-Co website"
+      },
+      "technologies": ["html", "css", "javascript", "figma"],
+      "links": {
+        "live": "https://larstp.github.io/E-Co/",
+        "repository": "https://github.com/larstp/E-Co"
+      },
+      "articlePath": "/projects/e-co",
+      "featured": false,
+      "dateCreated": "2025-05-20",
+      "status": "archived"
+    },
+    {
+      "id": "oslo-community-science-museum",
+      "title": "Oslo Community Science Museum",
+      "description": "A responsive museum website created with HTML and CSS.",
+      "image": {
+        "src": "/images/projects/OCSM.webp",
+        "alt": "Screenshot of the Oslo Community Science Museum website"
+      },
+      "technologies": ["html", "css", "figma"],
+      "links": {
+        "live": "https://larstp.github.io/Oslo-Community-Science-Museum/",
+        "repository": "https://github.com/larstp/Oslo-Community-Science-Museum"
+      },
+      "articlePath": "/projects/oslo-community-science-museum",
+      "featured": false,
+      "dateCreated": "2025-02-20",
+      "status": "archived"
+    },
+    {
+      "id": "rainy-days",
+      "title": "RainyDays",
+      "description": "An e-commerce site for a fictional outdoor clothing brand.",
+      "image": {
+        "src": "/images/projects/RainyDays.webp",
+        "alt": "RainyDays logo"
+      },
+      "technologies": ["html", "css", "javascript", "figma"],
+      "links": {
+        "live": "https://larstp.github.io/RainyDays/",
+        "repository": "https://github.com/larstp/RainyDays"
+      },
+      "articlePath": "/projects/rainy-days",
+      "featured": false,
+      "dateCreated": "2024-12-01",
+      "status": "archived"
+    }
+  ],
+  "settings": {
+    "maxFeaturedProjects": 3,
+    "sortBy": "dateCreated",
+    "sortOrder": "desc"
+  }
+}
