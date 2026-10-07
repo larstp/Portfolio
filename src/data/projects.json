@@ -8,23 +8,73 @@
         "src": "/images/projects/mimir.webp",
         "alt": "Mimir social media platform screenshot"
       },
-      "technologies": ["html", "css", "javascript", "typescript"],
+      "technologies": ["html", "css", "javascript"],
       "links": {
         "live": "https://mimir.larstp.com",
         "repository": "https://github.com/larstp/Mimir"
       },
       "articlePath": "/projects/mimir",
       "article": {
-        "title": "Mimir: a social media platform",
+        "title": "Mimir",
+        "subheading": "A social media platform.",
+        "roles": ["Designer", "UI/UX", "Frontend developer"],
+        "logo": {
+          "src": "/images/projects/logos/Mimir.svg",
+          "alt": "Mimir logo"
+        },
         "image": {
           "src": "/images/projects/mimir.webp",
           "alt": "Detailed screenshot of the Mimir platform",
-          "caption": "Mimir is a social media platform built around CRUD operations."
+          "caption": "Mimir is a dark and modern social media platform built for the JS2, CSS Frameworks & POR2 assignments."
         },
-        "description": "Mimir is a social media platform created to practise working with APIs, CRUD operations, authentication, and responsive interfaces. The project focuses on creating a clear experience while handling changing user-generated content.",
-        "improvement": "Improve the responsive layout and accessibility of the main platform views.",
-        "improvementReason": "The project can present its content more clearly on smaller screens and provide stronger interaction feedback for keyboard and assistive technology users.",
-        "role": "Frontend developer",
+        "description": "A social media platform",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": [
+              "Mimir is a responsive social media platform built for the JavaScript 2, CSS Frameworks, and Portfolio 2 assignments at NOROFF School of Technology and Digital Media. Users can create accounts, publish image-based posts, follow other users, search the feed, react to posts, and add comments.",
+              "The project began as a JavaScript application connected to the Noroff Social API. Its visual identity is inspired by the Mannaz rune, which represents people and human connection, making it a fitting foundation for a social platform. This is reflected in the dark interface, rune-inspired imagery, responsive layouts, and accessible interactions."
+            ],
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Development process",
+            "paragraph": [
+              "The first stage was developed for the JavaScript 2 assignment, with the main focus on building the application logic and connecting the interface to the Noroff API. This included authentication, post CRUD functionality, profiles, following, searching, reactions, and comments.",
+              "For the CSS Frameworks assignment, I chose to continue improving Mimir rather than start a separate page. I migrated the interface to Tailwind CSS while keeping the existing visual identity and making the layouts more consistent across the application.",
+              "The final stage, Portfolio 2, focused on refinement. I used feedback from the earlier assignments to improve the presentation, remove unused code and files, strengthen error handling, fix broken interactions, improve form usability, and add details such as password visibility toggles and fallbacks for broken images."
+            ],
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and Outcome",
+            "paragraph": [
+              "The project uses JavaScript with ES6 modules, HTML, Tailwind CSS, and the Noroff Social API. It is deployed as a static site through Vercel.",
+              "Mimir demonstrates how a project can grow through several stages: first establishing reliable functionality, then improving the visual system, and finally refining the details that make the application feel complete and presentable."
+            ],
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "pullRequest": "https://github.com/larstp/Mimir/pull/7",
+        "improvement": "",
+        "improvementReason": [
+          "- Removed unused legacy CSS files and stale stylesheet imports.",
+          "- Removed console.error instances and personal, informal, and unnecessary comments.",
+          "- Updated the README to document the JS2, CSS Frameworks, and POR2 assignments.",
+          "- Added a reusable image fallback for broken image URLs.",
+          "- Fixed transparent cards and images by defining cardBackground and correcting stacking order.",
+          "- Fixed the comment modal background and broken send icon path.",
+          "- Added show/hide password toggles to login and registration forms.",
+          "- Matched register form field sizing with the login form.",
+          "- Fixed duplicate like counts when liking posts.",
+          "- Changed pagination text to white.",
+          "- Removed the unused Favorites navigation item because the API does not support saved favorites.",
+          "- Added the Mimir logo to the unauthenticated home-page message.",
+          "- Rebuilt and validated Tailwind CSS throughout the changes."
+        ],
         "process": "The project involved planning the interface, connecting the frontend to the API, building reusable UI patterns, and testing the main user flows."
       },
       "featured": true,
@@ -34,28 +84,50 @@
     {
       "id": "butta",
       "title": "Butta",
-      "description": "A JavaScript framework project demonstrating component-driven interfaces and practical front-end problem solving.",
+      "description": "A quick JavaScript framework project demonstrating component-driven interfaces and practical front-end problem solving.",
       "image": {
         "src": "/images/projects/Butta.webp",
         "alt": "Detailed screenshot of the Butta landing page."
       },
-      "technologies": ["html", "css", "javascript", "react"],
+      "technologies": ["html", "css", "typescript", "react"],
       "links": {
         "live": "https://butta.larstp.com",
         "repository": "https://github.com/larstp/Butta"
       },
       "articlePath": "/projects/butta",
       "article": {
-        "title": "Butta: a JavaScript framework project",
-        "image": {
-          "src": "/images/missing.svg",
-          "alt": "Butta project article image coming soon",
-          "caption": "The Butta project image will be added here."
+        "title": "Butta",
+        "subheading": "Online auction house",
+        "roles": ["Designer", "UI/UX", "Frontend developer"],
+        "logo": {
+          "src": "/images/projects/logos/Butta.svg",
+          "alt": "Butta logo"
         },
+        "image": {
+          "src": "/images/projects/Butta.webp",
+          "alt": "Image of the Butta landing page",
+          "caption": "Butta was a quick project where I explored component-driven interfaces, structured frontend code, and practical problem solving in a JavaScript framework context."
+        },
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "Butta demonstrates component-driven interfaces, structured frontend code, and practical problem solving in a JavaScript framework context.",
+            "image": null,
+            "imagePosition": "right"
+          },
+          {
+            "heading": "Development process",
+            "paragraph": "The project focused on translating requirements into reusable components, organizing the interface, and refining the experience through testing and iteration.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "pullRequest": null,
         "description": "Butta is a JavaScript framework project created to demonstrate component-driven interfaces, structured application code, and practical frontend problem solving.",
         "improvement": "Improve the project structure and refine the responsive user experience.",
-        "improvementReason": "A clearer component structure and more consistent responsive behavior make the project easier to maintain and present professionally.",
-        "role": "Frontend developer",
+        "improvementReason": [
+          "A clearer component structure and more consistent responsive behavior make the project easier to maintain and present professionally."
+        ],
         "process": "The project focused on translating requirements into reusable components, organizing the interface, and refining the experience through testing and iteration."
       },
       "featured": true,
@@ -77,16 +149,38 @@
       },
       "articlePath": "/projects/barter",
       "article": {
-        "title": "Barter: an online auction house",
+        "title": "Barter",
+        "subheading": "An online auction house",
+        "roles": ["Frontend developer", "UI UX Designer"],
+        "logo": {
+          "src": "/images/projects/logos/Barter.svg",
+          "alt": "Barter logo"
+        },
         "image": {
           "src": "/images/projects/Barter.webp",
           "alt": "Barter project article image coming soon",
           "caption": "The Barter project image will be added here."
         },
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "Barter is an online auction house experience designed to make browsing listings, understanding item information, and taking action feel clear and accessible.",
+            "image": null,
+            "imagePosition": "right"
+          },
+          {
+            "heading": "Development process",
+            "paragraph": "The project combined interface planning, responsive implementation, content hierarchy, and iterative refinement of the core auction flows.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "pullRequest": null,
         "description": "Barter is a semester project for an online auction house. The experience is designed to make browsing listings, understanding item information, and taking action feel clear and accessible.",
         "improvement": "Improve accessibility and clarity across the auction browsing experience.",
-        "improvementReason": "Clearer hierarchy, stronger contrast, and more deliberate interaction states help users understand listings and navigate the service with confidence.",
-        "role": "Frontend developer",
+        "improvementReason": [
+          "Clearer hierarchy, stronger contrast, and more deliberate interaction states help users understand listings and navigate the service with confidence."
+        ],
         "process": "The project combined interface planning, responsive implementation, content hierarchy, and iterative refinement of the core auction flows."
       },
       "featured": true,

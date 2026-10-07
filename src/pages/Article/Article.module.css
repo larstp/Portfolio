@@ -1,8 +1,25 @@
 .page {
+  position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   min-height: 100svh;
-  padding: var(--content-padding);
+  padding: clamp(7rem, 10vw, 9rem) var(--content-padding) var(--content-padding);
+}
+
+.logoBackground {
+  position: fixed;
+  top: clamp(4rem, 8vw, 7rem);
+  bottom: 0;
+  left: 50%;
+  width: min(100%, 1440px);
+  z-index: -1;
+  transform: translateX(-50%);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: min(65vw, 700px);
+  opacity: 0.08;
+  pointer-events: none;
 }
 
 .article {
@@ -10,23 +27,83 @@
   margin: 0 auto;
 }
 
-.backLink,
-.eyebrow {
-  color: var(--text-light);
+.articleHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 220px);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.articleHeading {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.roleAside {
+  margin-top: 2rem;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.roleAside h2 {
+  margin: 0 0 0.75rem;
+  color: var(--text-title);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
 }
 
 .backLink {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   margin-bottom: 3rem;
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
   text-decoration: none;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .backLink:hover {
   color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.backIcon {
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  background-color: var(--primary);
+  -webkit-mask-image: url("/icons/flowbite_arrow-right-alt-outline.svg");
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url("/icons/flowbite_arrow-right-alt-outline.svg");
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  transition:
+    background-color 0.3s ease,
+    mask-image 0.2s ease;
+}
+
+.backIcon img {
+  display: none;
+}
+
+.backLink:hover .backIcon {
+  background-color: var(--accent);
+  -webkit-mask-image: url("/icons/flowbite_arrow-right-alt-solid.svg");
+  mask-image: url("/icons/flowbite_arrow-right-alt-solid.svg");
 }
 
 .eyebrow {
   margin-bottom: 0.75rem;
+  color: var(--text-light);
   font-size: 0.85rem;
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.18em;
@@ -39,11 +116,55 @@
   line-height: 0.95;
 }
 
+.subheading {
+  max-width: 620px;
+  margin-top: 1.5rem;
+  color: var(--text-title);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.15;
+}
+
 .articleActions {
+  grid-column: 1;
+  grid-row: 2;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 2rem;
+}
+
+.articleAction {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 700px) {
+  .articleHeader {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .articleHeading,
+  .roleAside,
+  .articleActions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .roleAside {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .articleActions {
+    flex-direction: column;
+  }
+
+  .articleAction {
+    width: 100%;
+  }
 }
 
 .heroImage,
@@ -58,6 +179,7 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  object-position: top center;
 }
 
 .imagePlaceholder {
@@ -74,7 +196,7 @@
 }
 
 .content {
-  max-width: 680px;
+  width: 100%;
   margin-top: 3rem;
   color: var(--text-body);
   font-size: 1.1rem;
@@ -88,6 +210,102 @@
   font-weight: var(--font-weight-bold);
 }
 
+.roleList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.roleList li {
+  padding: 0.75rem 0;
+  color: var(--text-body);
+  border-bottom: 1px solid var(--border);
+}
+
+.roleList li:first-child {
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 700px) {
+  .articleHeader {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .roleAside {
+    margin-top: 0;
+  }
+}
+
 .content p + p {
+  margin-top: 1rem;
+}
+
+.content p.improvementReason {
+  margin-top: 1.5rem;
+}
+
+.improvementDetails {
+  margin-top: 3rem;
+}
+
+.improvementDetails summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  color: var(--text-title);
+  cursor: pointer;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: var(--font-weight-semibold);
+  list-style: none;
+}
+
+.improvementDetails summary::-webkit-details-marker {
+  display: none;
+}
+
+.improvementDetails summary::after {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 1.25rem;
+  background: var(--text);
+  content: "";
+  -webkit-mask: url("/icons/lucide_chevron-down.svg") center / contain no-repeat;
+  mask: url("/icons/lucide_chevron-down.svg") center / contain no-repeat;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.improvementDetails summary::before {
+  order: 2;
+  width: 100%;
+  height: 1px;
+  flex: 1;
+  background: var(--text-light);
+  content: "";
+  transition: background-color 0.25s ease;
+}
+
+.improvementDetails summary::after {
+  order: 3;
+}
+
+.improvementDetails[open] summary::after {
+  background: var(--primary);
+  transform: rotate(180deg);
+}
+
+.improvementDetails[open] summary::before {
+  background: var(--primary);
+}
+
+.improvementContent {
+  padding: 0.75rem 0 1.5rem;
+}
+
+.improvementAction {
   margin-top: 1rem;
 }

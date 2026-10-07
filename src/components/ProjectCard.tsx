@@ -99,7 +99,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           onClick={(event) => event.stopPropagation()}
         >
           <img
-            src="/icons/material-symbols_link-rounded.svg"
+            src="/icons/streamline-ultimate_space-rocket-earth-bold.svg"
             alt=""
             aria-hidden="true"
           />
