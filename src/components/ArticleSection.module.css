@@ -47,6 +47,10 @@
   line-height: 1.7;
 }
 
+.copy p + p {
+  margin-top: 1rem;
+}
+
 .imageBlock {
   margin: 0;
 }

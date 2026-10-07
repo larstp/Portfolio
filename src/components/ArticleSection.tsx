@@ -2,7 +2,7 @@ import styles from "./ArticleSection.module.css";
 
 export type ArticleSectionData = {
   heading: string;
-  paragraph: string;
+  paragraph: string | string[];
   image?: {
     src: string;
     alt: string;
@@ -27,7 +27,13 @@ function ArticleSection({ section }: ArticleSectionProps) {
     <section className={className}>
       <div className={styles.copy}>
         <h2>{section.heading}</h2>
-        <p>{section.paragraph}</p>
+        {Array.isArray(section.paragraph) ? (
+          section.paragraph.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))
+        ) : (
+          <p>{section.paragraph}</p>
+        )}
       </div>
       {section.image ? (
         <figure className={styles.imageBlock}>
