@@ -1,5 +1,6 @@
 import projectData from "./projects.json";
 import technologyData from "./technologies.json";
+import type { ArticleSectionData } from "../components/ArticleSection";
 
 export const technologies = technologyData.technologies;
 export type ProjectTechnology = keyof typeof technologies;
@@ -7,6 +8,7 @@ export type ProjectTechnology = keyof typeof technologies;
 export type ProjectArticle = {
   title: string;
   subheading: string;
+  sections: ArticleSectionData[];
   logo?: {
     src: string;
     alt: string;
@@ -18,7 +20,7 @@ export type ProjectArticle = {
   } | null;
   description: string;
   improvement: string;
-  improvementReason: string;
+  improvementReason: string[];
   pullRequest?: string | null;
   roles: string[];
   process: string;

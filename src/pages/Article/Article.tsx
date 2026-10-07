@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import type { MouseEvent } from "react";
 import { Button, ButtonLink } from "../../components/Button";
+import ArticleSection from "../../components/ArticleSection";
 import { getProjectById } from "../../data/projects";
 import { smoothScrollTo } from "../../utils/smoothScroll";
 import styles from "./Article.module.css";
@@ -141,25 +142,35 @@ function Article() {
           </div>
         )}
 
+        <div className={styles.sections}>
+          {article.sections.map((section) => (
+            <ArticleSection section={section} key={section.heading} />
+          ))}
+        </div>
+
         <div className={styles.content}>
-          <p>{article.description}</p>
-          <h2>Process</h2>
-          <p>{article.process}</p>
-          <h2>Improvement</h2>
-          <p>{article.improvement}</p>
-          <p>{article.improvementReason}</p>
-          {article.pullRequest ? (
-            <ButtonLink
-              className={styles.improvementAction}
-              variant="ghost"
-              size="sm"
-              href={article.pullRequest}
-              external
-            >
-              <img src="/icons/mdi_github.svg" alt="" aria-hidden="true" />
-              Check out the pull request
-            </ButtonLink>
-          ) : null}
+          <details className={styles.improvementDetails}>
+            <summary>{article.improvement || "Recent improvements"}</summary>
+            <div className={styles.improvementContent}>
+              {article.improvementReason.map((paragraph) => (
+                <p className={styles.improvementReason} key={paragraph}>
+                  {paragraph}
+                </p>
+              ))}
+              {article.pullRequest ? (
+                <ButtonLink
+                  className={styles.improvementAction}
+                  variant="ghost"
+                  size="sm"
+                  href={article.pullRequest}
+                  external
+                >
+                  <img src="/icons/mdi_github.svg" alt="" aria-hidden="true" />
+                  Check out the pull request
+                </ButtonLink>
+              ) : null}
+            </div>
+          </details>
         </div>
       </article>
     </main>

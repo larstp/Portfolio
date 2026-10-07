@@ -17,6 +17,7 @@
       "article": {
         "title": "Mimir",
         "subheading": "A social media platform.",
+        "roles": ["Designer", "UI/UX", "Frontend developer"],
         "logo": {
           "src": "/images/projects/logos/Mimir.svg",
           "alt": "Mimir logo"
@@ -24,13 +25,40 @@
         "image": {
           "src": "/images/projects/mimir.webp",
           "alt": "Detailed screenshot of the Mimir platform",
-          "caption": "Mimir is a social media platform built around CRUD operations."
+          "caption": "Mimir is a dark and modern social media platform built for the JS2, CSS Frameworks & POR2 assignments."
         },
         "description": "A social media platform",
-        "improvement": "Improve the responsive layout and accessibility of the main platform views.",
-        "improvementReason": "The project can present its content more clearly on smaller screens and provide stronger interaction feedback for keyboard and assistive technology users.",
-        "pullRequest": null,
-        "roles": ["Frontend developer", "UI implementation", "API integration"],
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "Mimir is a social media platform created to explore CRUD operations, API integration, authentication, and responsive interface design.",
+            "image": null,
+            "imagePosition": "right"
+          },
+          {
+            "heading": "Development process",
+            "paragraph": "The project involved planning the interface, connecting the frontend to the API, building reusable UI patterns, and testing the main user flows.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "pullRequest": "https://github.com/larstp/Mimir/pull/7",
+        "improvement": "",
+        "improvementReason": [
+          "- Removed unused legacy CSS files and stale stylesheet imports.",
+          "- Removed console.error instances and personal, informal, and unnecessary comments.",
+          "- Updated the README to document the JS2, CSS Frameworks, and POR2 assignments.",
+          "- Added a reusable image fallback for broken image URLs.",
+          "- Fixed transparent cards and images by defining cardBackground and correcting stacking order.",
+          "- Fixed the comment modal background and broken send icon path.",
+          "- Added show/hide password toggles to login and registration forms.",
+          "- Matched register form field sizing with the login form.",
+          "- Fixed duplicate like counts when liking posts.",
+          "- Changed pagination text to white.",
+          "- Removed the unused Favorites navigation item because the API does not support saved favorites.",
+          "- Added the Mimir logo to the unauthenticated home-page message.",
+          "- Rebuilt and validated Tailwind CSS throughout the changes."
+        ],
         "process": "The project involved planning the interface, connecting the frontend to the API, building reusable UI patterns, and testing the main user flows."
       },
       "featured": true,
@@ -63,9 +91,25 @@
           "alt": "Butta project article image coming soon",
           "caption": "The Butta project image will be added here."
         },
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "Butta demonstrates component-driven interfaces, structured frontend code, and practical problem solving in a JavaScript framework context.",
+            "image": null,
+            "imagePosition": "right"
+          },
+          {
+            "heading": "Development process",
+            "paragraph": "The project focused on translating requirements into reusable components, organizing the interface, and refining the experience through testing and iteration.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
         "description": "Butta is a JavaScript framework project created to demonstrate component-driven interfaces, structured application code, and practical frontend problem solving.",
         "improvement": "Improve the project structure and refine the responsive user experience.",
-        "improvementReason": "A clearer component structure and more consistent responsive behavior make the project easier to maintain and present professionally.",
+        "improvementReason": [
+          "A clearer component structure and more consistent responsive behavior make the project easier to maintain and present professionally."
+        ],
         "pullRequest": null,
         "roles": [
           "Frontend developer",
@@ -104,9 +148,25 @@
           "alt": "Barter project article image coming soon",
           "caption": "The Barter project image will be added here."
         },
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "Barter is an online auction house experience designed to make browsing listings, understanding item information, and taking action feel clear and accessible.",
+            "image": null,
+            "imagePosition": "right"
+          },
+          {
+            "heading": "Development process",
+            "paragraph": "The project combined interface planning, responsive implementation, content hierarchy, and iterative refinement of the core auction flows.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
         "description": "Barter is a semester project for an online auction house. The experience is designed to make browsing listings, understanding item information, and taking action feel clear and accessible.",
         "improvement": "Improve accessibility and clarity across the auction browsing experience.",
-        "improvementReason": "Clearer hierarchy, stronger contrast, and more deliberate interaction states help users understand listings and navigate the service with confidence.",
+        "improvementReason": [
+          "Clearer hierarchy, stronger contrast, and more deliberate interaction states help users understand listings and navigate the service with confidence."
+        ],
         "pullRequest": null,
         "roles": ["Frontend developer", "UI UX Designer"],
         "process": "The project combined interface planning, responsive implementation, content hierarchy, and iterative refinement of the core auction flows."
