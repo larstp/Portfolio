@@ -1,5 +1,6 @@
 import styles from "./ArticleSection.module.css";
 
+/** Content and optional media used to render one Article narrative section. */
 export type ArticleSectionData = {
   heading: string;
   paragraph: string | string[];

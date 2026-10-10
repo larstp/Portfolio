@@ -8,18 +8,26 @@ Use the complete copy-pasteable template here:
 
 ## 1. Prepare the Assets
 
-1. Add the project thumbnail to `public/images/projects/`.
-2. Add the main Article image to the same folder.
-3. Add the project logo to `public/images/projects/logos/` if it has one.
-4. Use `.webp`, `.png`, or `.jpeg` for project and Article images.
-5. Keep every thumbnail and Article image at or below 200 KB.
-6. Use browser-friendly public paths beginning with `/images/`, not `public/`.
+1. Create a lowercase project folder inside `public/images/projects/`, matching the project `id`.
+2. Add the project thumbnail as `public/images/projects/project-id/thumbnail.webp`.
+3. Add carousel images inside `public/images/projects/project-id/carousel/`.
+4. Add the project logo as `public/images/projects/project-id/logo.svg` if it has one.
+5. Use `.webp`, `.png`, or `.jpeg` for project and Article images.
+6. Keep every thumbnail and Article image at or below 200 KB.
+7. Use browser-friendly public paths beginning with `/images/`, not `public/`.
 
 Example:
 
 ```text
-File: public/images/projects/my-project.webp
-JSON: /images/projects/my-project.webp
+File: public/images/projects/my-project/thumbnail.webp
+JSON: /images/projects/my-project/thumbnail.webp
+```
+
+Carousel example:
+
+```text
+File: public/images/projects/mimir/carousel/image.webp
+JSON: /images/projects/mimir/carousel/image.webp
 ```
 
 ## 2. Copy the Template
@@ -55,6 +63,7 @@ Do not add comments to JSON. JSON does not support comments. Use the existing `f
 - `article.logo`: Optional logo image and alt text.
 - `article.image`: Main Article image, alt text, and caption.
 - `article.sections`: Ordered Article content sections.
+- `article.carousel`: Optional additional images stored in the project `carousel` folder.
 - `article.pullRequest`: GitHub pull request URL, or `null` if there is none.
 - `article.improvement`: Collapsible assignment improvement title.
 - `article.improvementReason`: Array of paragraphs explaining the improvement.
@@ -69,7 +78,7 @@ Each section can contain one paragraph or multiple paragraphs:
   "heading": "Project overview",
   "paragraph": ["The first paragraph.", "The second paragraph."],
   "image": {
-    "src": "/images/projects/my-project-overview.webp",
+    "src": "/images/projects/my-project/carousel/overview.webp",
     "alt": "Description of the overview image",
     "caption": "Overview of the project."
   },
@@ -150,6 +159,7 @@ Other common mistakes include:
 - Using single quotes instead of double quotes.
 - Adding comments inside JSON.
 - Using `public/images/...` instead of `/images/...` in browser paths.
+- Using Windows backslashes such as `public\\images\\...` instead of URL forward slashes such as `/images/...`.
 - Using a technology ID that does not exist in `technologies.json`.
 - Setting `featured` to `true` but leaving `status` as `archived`.
 

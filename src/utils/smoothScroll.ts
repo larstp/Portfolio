@@ -1,3 +1,10 @@
+/**
+ * Scrolls to a document position using cubic easing.
+ * Respects the user's reduced-motion preference.
+ *
+ * @param targetY - The vertical document position to reach.
+ * @param duration - Animation duration in milliseconds.
+ */
 export function smoothScrollTo(targetY: number, duration = 800) {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     window.scrollTo(0, targetY);
