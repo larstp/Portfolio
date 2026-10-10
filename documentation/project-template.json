@@ -3,7 +3,7 @@
   "title": "Project title",
   "description": "Short description for the home page card. Keep this concise.",
   "image": {
-    "src": "/images/projects/project-thumbnail.webp",
+    "src": "/images/projects/project-id/thumbnail.webp",
     "alt": "Short description of the project thumbnail"
   },
   "technologies": ["html", "css"],
@@ -17,11 +17,11 @@
     "subheading": "Short article introduction shown below the article title.",
     "roles": ["Frontend developer"],
     "logo": {
-      "src": "/images/projects/logos/project-logo.svg",
+      "src": "/images/projects/project-id/logo.svg",
       "alt": "Project logo"
     },
     "image": {
-      "src": "/images/projects/project-article-image.webp",
+      "src": "/images/projects/project-id/carousel/main.webp",
       "alt": "Description of the main article image",
       "caption": "Caption for the main article image."
     },
@@ -39,7 +39,7 @@
           "The second paragraph for this section."
         ],
         "image": {
-          "src": "/images/projects/project-section-image.webp",
+          "src": "/images/projects/project-id/carousel/section-image.webp",
           "alt": "Description of the section image",
           "caption": "Caption for the section image."
         },

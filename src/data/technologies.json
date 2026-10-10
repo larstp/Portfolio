@@ -125,6 +125,11 @@
       "color": "#3ECF8E",
       "category": "backend"
     },
+    "discord": {
+      "name": "Discord",
+      "color": "#5865F2",
+      "category": "communication"
+    },
     "nextjs": {
       "name": "Next.js",
       "color": "#000000",
