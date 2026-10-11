@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import type { MouseEvent } from "react";
 import { Button, ButtonLink } from "../../components/Button";
 import ArticleSection from "../../components/ArticleSection";
+import TechnologyPills from "../../components/TechnologyPills";
 import { getProjectById } from "../../data/projects";
 import { smoothScrollTo } from "../../utils/smoothScroll";
 import styles from "./Article.module.css";
@@ -63,7 +64,6 @@ function Article() {
           to="/#projects"
           onClick={handleBackToProjects}
         >
-          <span>Back to home</span>
           <span className={styles.backIcon} aria-hidden="true">
             <img
               className={styles.backIconOutline}
@@ -76,12 +76,14 @@ function Article() {
               alt=""
             />
           </span>
+          <span>Back to home</span>
         </Link>
         <div className={styles.articleHeader}>
           <div className={styles.articleHeading}>
             <p className={styles.eyebrow}>Project article</p>
             <h1>{article.title}</h1>
             <h4 className={styles.subheading}>{article.subheading}</h4>
+            <TechnologyPills technologiesUsed={project.technologies} />
           </div>
           <aside className={styles.roleAside} aria-label="My role">
             <ul className={styles.roleList}>
