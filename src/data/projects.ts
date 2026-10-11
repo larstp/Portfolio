@@ -64,6 +64,7 @@ export const projects: Project[] = allProjects
   .filter((project) => project.featured && project.status === "active")
   .map(normalizeProject);
 
+/** Finds and normalizes a project record for an Article route. */
 export function getProjectById(id: string) {
   const project = allProjects.find((candidate) => candidate.id === id);
   return project ? normalizeProject(project) : undefined;

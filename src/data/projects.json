@@ -5,7 +5,7 @@
       "title": "Mimir",
       "description": "Mimir is a social media platform I built to explore CRUD operations and responsive front-end development.",
       "image": {
-        "src": "/images/projects/mimir.webp",
+        "src": "/images/projects/mimir/thumbnail.webp",
         "alt": "Mimir social media platform screenshot"
       },
       "technologies": ["html", "css", "javascript"],
@@ -19,11 +19,11 @@
         "subheading": "A social media platform.",
         "roles": ["Designer", "UI/UX", "Frontend developer"],
         "logo": {
-          "src": "/images/projects/logos/Mimir.svg",
+          "src": "/images/projects/mimir/logo.svg",
           "alt": "Mimir logo"
         },
         "image": {
-          "src": "/images/projects/mimir.webp",
+          "src": "/images/projects/mimir/thumbnail.webp",
           "alt": "Detailed screenshot of the Mimir platform",
           "caption": "Mimir is a dark and modern social media platform built for the JS2, CSS Frameworks & POR2 assignments."
         },
@@ -54,8 +54,12 @@
               "The project uses JavaScript with ES6 modules, HTML, Tailwind CSS, and the Noroff Social API. It is deployed as a static site through Vercel.",
               "Mimir demonstrates how a project can grow through several stages: first establishing reliable functionality, then improving the visual system, and finally refining the details that make the application feel complete and presentable."
             ],
-            "image": null,
-            "imagePosition": "below"
+            "image": {
+              "src": "/images/projects/mimir/carousel/mimir-post.webp",
+              "alt": "Mimir post interface",
+              "caption": "A Mimir post view with social interactions."
+            },
+            "imagePosition": "left"
           }
         ],
         "pullRequest": "https://github.com/larstp/Mimir/pull/7",
@@ -86,7 +90,7 @@
       "title": "Butta",
       "description": "A quick JavaScript framework project demonstrating component-driven interfaces and practical front-end problem solving.",
       "image": {
-        "src": "/images/projects/Butta.webp",
+        "src": "/images/projects/butta/thumbnail.webp",
         "alt": "Detailed screenshot of the Butta landing page."
       },
       "technologies": ["html", "css", "typescript", "react"],
@@ -100,33 +104,51 @@
         "subheading": "Online auction house",
         "roles": ["Designer", "UI/UX", "Frontend developer"],
         "logo": {
-          "src": "/images/projects/logos/Butta.svg",
+          "src": "/images/projects/butta/logo.svg",
           "alt": "Butta logo"
         },
         "image": {
-          "src": "/images/projects/Butta.webp",
+          "src": "/images/projects/butta/thumbnail.webp",
           "alt": "Image of the Butta landing page",
           "caption": "Butta was a quick project where I explored component-driven interfaces, structured frontend code, and practical problem solving in a JavaScript framework context."
         },
         "sections": [
           {
             "heading": "Project overview",
-            "paragraph": "Butta demonstrates component-driven interfaces, structured frontend code, and practical problem solving in a JavaScript framework context.",
+            "paragraph": [
+              "Butta is a responsive e-commerce front-end built with React, TypeScript, and Vite. It fetches products from the Noroff Online Shop API and lets users browse products, search and sort items, view product details, manage a cart, and complete a mock checkout flow.",
+              "The project was originally created as a short introductory assignment for the JS Frameworks course, focused on learning the fundamentals of React, TypeScript, API integration, routing, and state management. It has since been refurbished for the POR2 assignment with visual, accessibility, performance, and maintainability improvements."
+            ],
             "image": null,
-            "imagePosition": "right"
+            "imagePosition": "below"
           },
           {
             "heading": "Development process",
-            "paragraph": "The project focused on translating requirements into reusable components, organizing the interface, and refining the experience through testing and iteration.",
+            "paragraph": [
+              "Butta was created for the JavaScript Frameworks assignment at NOROFF. The goal was to build a functional, responsive online shop using React, TypeScript, and a REST API.",
+              "For Portfolio 2, the original project was refurbished for professional presentation. The work addressed feedback, accessibility, maintainability, visual refinement, and incomplete or inconsistent functionality."
+            ],
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": [
+              "Butta uses React, TypeScript, Vite, React Router DOM, Tailwind CSS, ESLint, and OGL for its WebGL background.",
+              "The project demonstrates a component-driven shop experience with API-powered products, typed cart state, search, sorting, discounts, ratings, and responsive layouts."
+            ],
             "image": null,
             "imagePosition": "below"
           }
         ],
         "pullRequest": null,
         "description": "Butta is a JavaScript framework project created to demonstrate component-driven interfaces, structured application code, and practical frontend problem solving.",
-        "improvement": "Improve the project structure and refine the responsive user experience.",
+        "improvement": "Recent improvements",
         "improvementReason": [
-          "A clearer component structure and more consistent responsive behavior make the project easier to maintain and present professionally."
+          "Redesigned the hero and layout with marquee text, responsive spacing, and a smooth bottom fade.",
+          "Replaced the original orange buttons with a liquid-glass visual style and improved contrast across cards, fields, cart information, and notifications.",
+          "Improved mobile navigation, focus states, product tags, ratings, search, and sale filtering.",
+          "Lazy-loaded the WebGL background, consolidated discount logic, fixed a checkout update loop, corrected local-storage behavior, and added documentation."
         ],
         "process": "The project focused on translating requirements into reusable components, organizing the interface, and refining the experience through testing and iteration."
       },
@@ -139,7 +161,7 @@
       "title": "Barter",
       "description": "A semester project focused on creating a clear and accessible web experience for a online auction house.",
       "image": {
-        "src": "/images/projects/Barter.webp",
+        "src": "/images/projects/barter/thumbnail.webp",
         "alt": "Detailed screenshot of the Barter landing page."
       },
       "technologies": ["html", "css", "javascript", "typescript"],
@@ -153,33 +175,55 @@
         "subheading": "An online auction house",
         "roles": ["Frontend developer", "UI UX Designer"],
         "logo": {
-          "src": "/images/projects/logos/Barter.svg",
+          "src": "/images/projects/barter/logo.svg",
           "alt": "Barter logo"
         },
         "image": {
-          "src": "/images/projects/Barter.webp",
+          "src": "/images/projects/barter/thumbnail.webp",
           "alt": "Barter project article image coming soon",
           "caption": "The Barter project image will be added here."
         },
         "sections": [
           {
             "heading": "Project overview",
-            "paragraph": "Barter is an online auction house experience designed to make browsing listings, understanding item information, and taking action feel clear and accessible.",
+            "paragraph": [
+              "Barter is a modern, responsive auction house platform built as part of the Semester Project 2 assignment at NOROFF. The platform allows users to create listings, place bids, manage their profiles, and participate in auctions using a credit-based system.",
+              "The project was later refined for the POR2 portfolio assignment, with a focus on visual polish, responsive behavior, accessibility, and clearer user feedback."
+            ],
             "image": null,
-            "imagePosition": "right"
+            "imagePosition": "below"
           },
           {
             "heading": "Development process",
-            "paragraph": "The project combined interface planning, responsive implementation, content hierarchy, and iterative refinement of the core auction flows.",
+            "paragraph": [
+              "Barter was created for the NOROFF Semester Project 2 assignment. The brief required a student-only auction application integrated with the Noroff Auction House API, including listings, profiles, bidding, credits, and authentication.",
+              "The project was later refined for Portfolio 2 with a focus on lecturer feedback, maintainability, responsive behavior, accessibility, dark mode, and visual presentation."
+            ],
+            "image": {
+              "src": "/images/projects/barter/carousel/barter-bidding-cards.webp",
+              "alt": "Barter bidding cards interface",
+              "caption": "The Barter bidding interface and listing cards."
+            },
+            "imagePosition": "right"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": [
+              "Barter uses Vanilla JavaScript with ES6 modules, HTML, Tailwind CSS, Flowbite and Lucide icons, and the Noroff v2 Auction House API.",
+              "The result is a responsive auction experience with authentication, listing management, bidding, profile features, theme support, and improved mobile controls."
+            ],
             "image": null,
             "imagePosition": "below"
           }
         ],
         "pullRequest": null,
         "description": "Barter is a semester project for an online auction house. The experience is designed to make browsing listings, understanding item information, and taking action feel clear and accessible.",
-        "improvement": "Improve accessibility and clarity across the auction browsing experience.",
+        "improvement": "Recent improvements",
         "improvementReason": [
-          "Clearer hierarchy, stronger contrast, and more deliberate interaction states help users understand listings and navigate the service with confidence."
+          "Added persistent light/dark mode with a header toggle and theme-aware logos.",
+          "Improved mobile controls, login icons, spacing, form controls, labels, footer styling, profile avatars, and hover states.",
+          "Added Cabinet Grotesk typography to Home and Listings headings, clearer copy, highest-bid information, auction subheadings, and a signup marquee.",
+          "Added password visibility controls, confirm-password validation, improved bid indicators, and a shared safe API response parser."
         ],
         "process": "The project combined interface planning, responsive implementation, content hierarchy, and iterative refinement of the core auction flows."
       },
@@ -188,11 +232,104 @@
       "status": "active"
     },
     {
+      "id": "slovstuggu-gcg",
+      "title": "Sløvstuggu-GCG",
+      "description": "A website for trading Gundam GCG cards through Discord within the local community",
+      "image": {
+        "src": "/images/projects/slovstuggu-gcg/thumbnail.webp",
+        "alt": "The Sløvstuggu GCG trading platform"
+      },
+      "technologies": [
+        "html",
+        "css",
+        "typescript",
+        "react",
+        "vite",
+        "supabase",
+        "discord"
+      ],
+      "links": {
+        "live": "https://gcg.slovstuggu.com",
+        "repository": "https://github.com/larstp/slovstuggu-gcg"
+      },
+      "articlePath": "/projects/slovstuggu-gcg",
+      "article": {
+        "title": "Sløvstuggu-GCG",
+        "subheading": "A community marketplace for Gundam Card Game collectors in Norway",
+        "roles": ["Full-stack developer", "UI/UX designer", "Admin"],
+        "logo": {
+          "src": "/images/projects/slovstuggu-gcg/logo.svg",
+          "alt": "Project logo"
+        },
+        "image": {
+          "src": "/images/projects/slovstuggu-gcg/carousel/gcg-hero.webp",
+          "alt": "A modern and high-tech landing page",
+          "caption": "A modern and responsive interface for trading Gundam GCG cards"
+        },
+        "sections": [
+          {
+            "heading": "A home for Gundam Card Game collectors",
+            "paragraph": [
+              "SLØVSTUGGU TCG is a work-in-progress community platform for players and collectors of the Gundam Card Game in Norway.",
+              "The website is being developed to make it easier to discover cards, manage collections, and connect with other enthusiasts."
+            ],
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Trading through Discord",
+            "paragraph": [
+              "Trades and sales are intended to take place through the Gundam Card Game Norway Discord community.",
+              "The website helps members find cards and sellers, while Discord remains the place to discuss prices, shipping, payment, and trade details."
+            ],
+            "image": {
+              "src": "/images/projects/slovstuggu-gcg/carousel/gcg-marketplace.webp",
+              "alt": "Sløvstuggu GCG marketplace interface",
+              "caption": "The Sløvstuggu GCG marketplace interface."
+            },
+            "imagePosition": "right"
+          },
+          {
+            "heading": "Explore the marketplace",
+            "paragraph": "The marketplace gives users an overview of cards available from other collectors. Visitors can browse card details, compare listings, view prices, and contact sellers through Discord.",
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Collections and wishlists",
+            "paragraph": "Planned features include personal digital collections and wishlists. Members will be able to keep track of cards they own, save cards they are looking for, and eventually receive notifications when wanted cards become available.",
+            "image": {
+              "src": "/images/projects/slovstuggu-gcg/carousel/gcg-user.webp",
+              "alt": "Sløvstuggu GCG user interface",
+              "caption": "A preview of the planned user-focused collection experience."
+            },
+            "imagePosition": "left"
+          },
+          {
+            "heading": "Work in progress and future plans",
+            "paragraph": "The website is still under development. User signup and registration have not yet been implemented, so access is currently limited while the platform is being built and tested.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "pullRequest": null,
+        "description": "SLØVSTUGGU TCG is a Norwegian-focused community marketplace for Gundam Card Game collectors and players.",
+        "improvement": "Current project status",
+        "improvementReason": [
+          "Future plans include improved collection management, price tracking, Discord notifications, user profiles, trader ratings, expanded search tools, and support for additional card games and communities."
+        ],
+        "process": "The platform is being developed around the existing Gundam Card Game Norway Discord community, with the website acting as a structured discovery and marketplace layer."
+      },
+      "featured": false,
+      "dateCreated": "2025-10-20",
+      "status": "archived"
+    },
+    {
       "id": "e-co",
       "title": "E-Co",
       "description": "A first-year e-commerce project built with HTML, CSS, and JavaScript.",
       "image": {
-        "src": "/images/projects/E-Co.webp",
+        "src": "/images/projects/e-co/thumbnail.webp",
         "alt": "Screenshot of the E-Co website"
       },
       "technologies": ["html", "css", "javascript", "figma"],
@@ -210,7 +347,7 @@
       "title": "Oslo Community Science Museum",
       "description": "A responsive museum website created with HTML and CSS.",
       "image": {
-        "src": "/images/projects/OCSM.webp",
+        "src": "/images/projects/oslo-community-science-museum/thumbnail.webp",
         "alt": "Screenshot of the Oslo Community Science Museum website"
       },
       "technologies": ["html", "css", "figma"],
@@ -228,7 +365,7 @@
       "title": "RainyDays",
       "description": "An e-commerce site for a fictional outdoor clothing brand.",
       "image": {
-        "src": "/images/projects/RainyDays.webp",
+        "src": "/images/projects/rainy-days/thumbnail.webp",
         "alt": "RainyDays logo"
       },
       "technologies": ["html", "css", "javascript", "figma"],

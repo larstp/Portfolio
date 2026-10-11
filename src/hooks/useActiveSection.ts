@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
 
+/**
+ * Tracks the last configured section whose top has crossed the viewport marker.
+ *
+ * @param sectionIds - Section IDs to track in document order.
+ * @param enabled - Whether tracking should be active.
+ * @returns The active section ID, or null when none is active.
+ */
 export function useActiveSection(
   sectionIds: readonly string[],
   enabled = true,
