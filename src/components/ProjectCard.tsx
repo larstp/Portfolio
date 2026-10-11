@@ -49,6 +49,9 @@ function ProjectCard({ project }: ProjectCardProps) {
       onClick={handleCardClick}
       onKeyDown={handleCardKeyDown}
     >
+      {project.projectType ? (
+        <span className={styles.projectType}>{project.projectType}</span>
+      ) : null}
       {project.image ? (
         <img
           className={styles.image}

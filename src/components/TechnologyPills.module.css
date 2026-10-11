@@ -1,0 +1,43 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 1.25rem 0 0;
+}
+
+.pill {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--technology-color);
+  border-radius: 999px;
+  color: var(--technology-color);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-medium);
+  cursor: default;
+  user-select: none;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+@media (min-width: 701px) and (hover: hover) {
+  .pill {
+    color: var(--gray-light);
+    border-color: var(--gray-light);
+  }
+
+  .pill:hover {
+    color: var(--technology-color);
+    border-color: var(--technology-color);
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 700px) {
+  .pill {
+    color: var(--technology-color);
+    border-color: var(--technology-color);
+  }
+}

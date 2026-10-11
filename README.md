@@ -1,4 +1,4 @@
-# Lars Torp Pettersen Portfolio
+# larstp - Portfolio
 
 <p align="center">
 	<img
@@ -24,7 +24,7 @@ This repository is the React-based successor to my original portfolio site, [lar
 - [Butta](https://butta.larstp.com) - JavaScript framework project
 - [Barter](https://barter.larstp.com) - online auction house experience
 
-Each project has a teaser card on the home page and a dedicated Article page with additional project information.
+Each project has a clickable teaser card on the home page and a dedicated Article page with additional project information.
 
 ## Technology
 

@@ -18,10 +18,16 @@ type ArticleSectionProps = {
 
 function ArticleSection({ section }: ArticleSectionProps) {
   const imagePosition = section.imagePosition ?? "below";
+  const imageLayoutClass =
+    imagePosition === "left"
+      ? styles.imageLeft
+      : imagePosition === "right"
+        ? styles.imageRight
+        : "";
   const className = [
     styles.section,
     imagePosition === "below" ? styles.imageBelow : styles.imageSide,
-    imagePosition === "left" ? styles.imageLeft : styles.imageRight,
+    imageLayoutClass,
   ].join(" ");
 
   return (
