@@ -1,11 +1,17 @@
 .mobileHeader,
 .desktopHeader {
   z-index: 1000;
+  pointer-events: none;
   background: linear-gradient(
     to bottom,
     var(--background) 25%,
     rgba(32, 32, 32, 0) 90%
   );
+}
+
+.mobileHeader > *,
+.desktopHeader > * {
+  pointer-events: auto;
 }
 
 .mobileHeader {
