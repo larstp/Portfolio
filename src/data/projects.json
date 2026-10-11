@@ -3,7 +3,7 @@
     {
       "id": "mimir",
       "title": "Mimir",
-      "projectType": "",
+      "projectType": "POR2",
       "description": "Mimir is a social media platform I built to explore CRUD operations and responsive front-end development.",
       "image": {
         "src": "/images/projects/mimir/thumbnail.webp",
@@ -89,7 +89,7 @@
     {
       "id": "butta",
       "title": "Butta",
-      "projectType": "",
+      "projectType": "POR2",
       "description": "A quick JavaScript framework project demonstrating component-driven interfaces and practical front-end problem solving.",
       "image": {
         "src": "/images/projects/butta/thumbnail.webp",
@@ -161,7 +161,7 @@
     {
       "id": "barter",
       "title": "Barter",
-      "projectType": "",
+      "projectType": "POR2",
       "description": "A semester project focused on creating a clear and accessible web experience for a online auction house.",
       "image": {
         "src": "/images/projects/barter/thumbnail.webp",
@@ -241,7 +241,7 @@
     {
       "id": "slovstuggu-gcg",
       "title": "Sløvstuggu-GCG",
-      "projectType": "Hobby project",
+      "projectType": "In development",
       "description": "A website for trading Gundam GCG cards through Discord within the local community",
       "image": {
         "src": "/images/projects/slovstuggu-gcg/thumbnail.webp",
@@ -328,9 +328,99 @@
         ],
         "process": "The platform is being developed around the existing Gundam Card Game Norway Discord community, with the website acting as a structured discovery and marketplace layer."
       },
-      "featured": false,
+      "featured": true,
       "dateCreated": "2025-10-20",
-      "status": "archived"
+      "status": "active"
+    },
+    {
+      "id": "holidaze",
+      "title": "Holidaze",
+      "projectType": "FED2 Exam",
+      "description": "An accommodation booking platform with customer and venue-manager experiences.",
+      "image": {
+        "src": "/images/projects/holidaze/thumbnail.webp",
+        "alt": "Holidaze accommodation booking platform"
+      },
+      "technologies": ["html", "css", "typescript", "react", "vite"],
+      "links": {
+        "live": "https://holidaze.larstp.com",
+        "repository": "https://github.com/larstp/Holidaze"
+      },
+      "articlePath": "/projects/holidaze",
+      "article": {
+        "title": "Holidaze",
+        "subheading": "An accommodation booking platform for travellers and venue managers",
+        "roles": ["Frontend developer", "UI/UX designer", "API integration"],
+        "logo": {
+          "src": "/images/projects/holidaze/logo.svg",
+          "alt": "Holidaze logo"
+        },
+        "image": {
+          "src": "/images/projects/holidaze/carousel/holidaze-hero-darkmode.webp",
+          "alt": "Holidaze booking platform in dark mode",
+          "caption": "Holidaze provides separate customer and venue-manager experiences."
+        },
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": [
+              "Holidaze is an accommodation booking platform built for the NOROFF FED2 Project Exam. Visitors can browse and search venues, customers can create bookings, and venue managers can create and manage their own venues and bookings.",
+              "The application uses the official NOROFF Holidaze API and provides separate customer and venue-manager dashboard experiences through one account and login flow."
+            ],
+            "image": {
+              "src": "/images/projects/holidaze/carousel/holidaze-home.webp",
+              "alt": "Holidaze home page with venue discovery content",
+              "caption": "The Holidaze discovery experience."
+            },
+            "imagePosition": "right"
+          },
+          {
+            "heading": "User roles and booking",
+            "paragraph": [
+              "Visitors can browse venues, search and filter results, view venue details, and register or sign in. Customers can select dates and guests, create bookings, manage trips, and update their profiles.",
+              "Venue managers can create, edit, and delete venues, view incoming bookings, manage calendars, and use customer booking features through the same account."
+            ],
+            "image": {
+              "src": "/images/projects/holidaze/carousel/holidaze-dashboard.webp",
+              "alt": "Holidaze dashboard interface",
+              "caption": "Dashboard views for managing bookings and venues."
+            },
+            "imagePosition": "left"
+          },
+          {
+            "heading": "Features and accessibility",
+            "paragraph": [
+              "The project includes venue search, city and country filters, amenity filters, date availability, booking summaries, confirmation feedback, protected routes, profile editing, responsive navigation, and theme support.",
+              "Accessibility work includes semantic landmarks, heading hierarchy, form labels, visible focus states, accessible names for icon controls, status feedback, keyboard support, alt text, and reduced-motion support."
+            ],
+            "image": {
+              "src": "/images/projects/holidaze/carousel/holidaze-search.webp",
+              "alt": "Holidaze venue search and filter interface",
+              "caption": "Search and filtering tools for venue discovery."
+            },
+            "imagePosition": "right"
+          },
+          {
+            "heading": "Technology and limitations",
+            "paragraph": [
+              "Holidaze uses React, TypeScript, Vite, React Router, CSS Modules, the Satoshi font, Lucide icons, React DayPicker, FullCalendar, and the NOROFF Holidaze API.",
+              "Some presentation elements use local demonstration data because the official API does not provide reviews, payments, or guest review creation. These limitations are documented in the project README."
+            ],
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "pullRequest": null,
+        "description": "Holidaze combines accommodation discovery, booking, profile management, and venue administration in one responsive application.",
+        "improvement": "Recent project improvements",
+        "improvementReason": [
+          "Improved responsive behavior, accessibility, theme support, protected routes, form validation, API feedback, and dashboard experiences."
+        ],
+        "process": "The project required translating a broad accommodation-platform brief into reusable React views, API-driven flows, protected dashboards, and responsive interfaces for multiple user roles."
+      },
+      "featured": true,
+      "dateCreated": "2026-01-01",
+      "status": "active"
     },
     {
       "id": "e-co",
