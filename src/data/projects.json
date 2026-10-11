@@ -3,6 +3,7 @@
     {
       "id": "mimir",
       "title": "Mimir",
+      "projectType": "",
       "description": "Mimir is a social media platform I built to explore CRUD operations and responsive front-end development.",
       "image": {
         "src": "/images/projects/mimir/thumbnail.webp",
@@ -88,6 +89,7 @@
     {
       "id": "butta",
       "title": "Butta",
+      "projectType": "",
       "description": "A quick JavaScript framework project demonstrating component-driven interfaces and practical front-end problem solving.",
       "image": {
         "src": "/images/projects/butta/thumbnail.webp",
@@ -159,6 +161,7 @@
     {
       "id": "barter",
       "title": "Barter",
+      "projectType": "",
       "description": "A semester project focused on creating a clear and accessible web experience for a online auction house.",
       "image": {
         "src": "/images/projects/barter/thumbnail.webp",
@@ -190,8 +193,12 @@
               "Barter is a modern, responsive auction house platform built as part of the Semester Project 2 assignment at NOROFF. The platform allows users to create listings, place bids, manage their profiles, and participate in auctions using a credit-based system.",
               "The project was later refined for the POR2 portfolio assignment, with a focus on visual polish, responsive behavior, accessibility, and clearer user feedback."
             ],
-            "image": null,
-            "imagePosition": "below"
+            "image": {
+              "src": "/images/projects/barter/carousel/barter-bidding-cards.webp",
+              "alt": "Barter bidding cards interface",
+              "caption": "The Barter bidding interface and listing cards."
+            },
+            "imagePosition": "right"
           },
           {
             "heading": "Development process",
@@ -200,11 +207,11 @@
               "The project was later refined for Portfolio 2 with a focus on lecturer feedback, maintainability, responsive behavior, accessibility, dark mode, and visual presentation."
             ],
             "image": {
-              "src": "/images/projects/barter/carousel/barter-bidding-cards.webp",
+              "src": "/images/projects/barter/assets.webp",
               "alt": "Barter bidding cards interface",
-              "caption": "The Barter bidding interface and listing cards."
+              "caption": "Snippet of assets used in design process."
             },
-            "imagePosition": "right"
+            "imagePosition": "below"
           },
           {
             "heading": "Technology and outcome",
@@ -234,6 +241,7 @@
     {
       "id": "slovstuggu-gcg",
       "title": "Sløvstuggu-GCG",
+      "projectType": "Hobby project",
       "description": "A website for trading Gundam GCG cards through Discord within the local community",
       "image": {
         "src": "/images/projects/slovstuggu-gcg/thumbnail.webp",

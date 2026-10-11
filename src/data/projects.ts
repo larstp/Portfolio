@@ -30,6 +30,7 @@ export type Project = {
   id: string;
   title: string;
   description: string;
+  projectType?: string;
   image?: {
     src: string;
     alt: string;

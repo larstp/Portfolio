@@ -45,6 +45,7 @@ Do not add comments to JSON. JSON does not support comments. Use the existing `f
 - `id`: Unique URL-safe identifier, for example `my-project`.
 - `title`: Project name.
 - `description`: Short home-card description. Keep it to approximately 120-130 characters and no more than two lines.
+- `projectType`: Optional category shown as a diagonal card banner, such as `School project`, `Exam project`, `Hobby project`, or `Client`.
 - `image.src`: Thumbnail path.
 - `image.alt`: Useful description of the thumbnail.
 - `technologies`: Technology IDs from `src/data/technologies.json`.
