@@ -1,6 +1,7 @@
 import type { MouseEvent } from "react";
 import { smoothScrollTo } from "../utils/smoothScroll";
 import { ButtonLink } from "./Button";
+import DitherVeil from "./DitherVeil";
 import styles from "./Hero.module.css";
 
 function Hero() {
@@ -87,10 +88,11 @@ function Hero() {
         </div>
 
         <div className={styles.portraitFrame}>
-          <img
+          <DitherVeil
             className={styles.portrait}
             src="/images/DSC03075-2.webp"
             alt="Lars Torp Pettersen"
+            reverse
           />
         </div>
       </div>
