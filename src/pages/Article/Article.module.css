@@ -37,6 +37,15 @@
 .articleHeading {
   grid-column: 1;
   grid-row: 1;
+  min-width: 0;
+}
+
+.articleTitle {
+  display: block;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .roleAside {

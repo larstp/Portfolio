@@ -115,27 +115,52 @@ function DecoderText({
       className={`${styles.decoder} ${className ?? ""}`}
       aria-label={text}
     >
-      {characters.map((character, index) => (
-        <span className={styles.slot} key={index}>
-          <span className={styles.ghost} aria-hidden="true">
-            {text[index]}
-          </span>
-          <span
-            className={`${styles.visual} ${
-              character === " "
-                ? styles.space
-                : visible[index]
-                  ? decoded[index]
-                    ? styles.character
-                    : styles.scrambling
-                  : styles.hidden
-            }`}
-            aria-hidden="true"
-          >
-            {character}
-          </span>
-        </span>
-      ))}
+      {(() => {
+        const words = text.split(" ");
+
+        return words.map((word, wordIndex) => {
+          const wordStart = words
+            .slice(0, wordIndex)
+            .reduce(
+              (total, previousWord) => total + previousWord.length + 1,
+              0,
+            );
+
+          return (
+            <span className={styles.word} key={`${word}-${wordIndex}`}>
+              {Array.from(word).map((character, index) => {
+                const currentIndex = wordStart + index;
+                const decodedCharacter = characters[currentIndex];
+
+                return (
+                  <span className={styles.slot} key={currentIndex}>
+                    <span className={styles.ghost} aria-hidden="true">
+                      {character}
+                    </span>
+                    <span
+                      className={`${styles.visual} ${
+                        visible[currentIndex]
+                          ? decoded[currentIndex]
+                            ? styles.character
+                            : styles.scrambling
+                          : styles.hidden
+                      }`}
+                      aria-hidden="true"
+                    >
+                      {decodedCharacter}
+                    </span>
+                  </span>
+                );
+              })}
+              {wordIndex < words.length - 1 ? (
+                <span className={styles.wordSpace} aria-hidden="true">
+                  {" "}
+                </span>
+              ) : null}
+            </span>
+          );
+        });
+      })()}
     </span>
   );
 }

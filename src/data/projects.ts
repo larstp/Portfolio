@@ -58,6 +58,9 @@ type ProjectRecord = Omit<Project, "technologies" | "articlePath"> & {
 };
 
 const allProjects = projectData.projects as ProjectRecord[];
+const projectOrder = new Map(
+  projectData.settings.projectOrder.map((id, index) => [id, index]),
+);
 
 function normalizeProject(project: ProjectRecord): Project {
   return {
@@ -69,6 +72,11 @@ function normalizeProject(project: ProjectRecord): Project {
 
 export const projects: Project[] = allProjects
   .filter((project) => project.featured && project.status === "active")
+  .sort(
+    (first, second) =>
+      (projectOrder.get(first.id) ?? Number.MAX_SAFE_INTEGER) -
+      (projectOrder.get(second.id) ?? Number.MAX_SAFE_INTEGER),
+  )
   .map(normalizeProject);
 
 /** Finds and normalizes a project record for an Article route. */

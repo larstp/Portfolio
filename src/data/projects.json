@@ -574,6 +574,54 @@
         "repository": "https://github.com/larstp/E-Co"
       },
       "articlePath": "/projects/e-co",
+      "article": {
+        "title": "E-Co",
+        "subheading": "A sustainable e-commerce experience.",
+        "roles": ["Designer", "UI/UX", "Frontend developer"],
+        "logo": {
+          "src": "/images/projects/e-co/logo.svg",
+          "alt": "E-Co logo"
+        },
+        "image": {
+          "src": "/images/projects/e-co/carousel/hero.webp",
+          "alt": "E-Co storefront",
+          "caption": "E-Co is a sustainable e-commerce concept built with HTML, CSS, and JavaScript."
+        },
+        "images": [
+          {
+            "src": "/images/projects/e-co/carousel/hero.webp",
+            "alt": "E-Co storefront",
+            "caption": "The E-Co storefront and product discovery experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/e-co/carousel/store.webp",
+            "alt": "E-Co product store",
+            "caption": "A closer look at the E-Co product store.",
+            "fitted": false
+          }
+        ],
+        "description": "A sustainable e-commerce website created for Project Exam 1.",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "E-Co is a responsive e-commerce concept focused on sustainable and affordable shopping. Users can browse products, view details, manage a cart, and complete a mock checkout flow.",
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": "The project demonstrates modular JavaScript, API-driven products, responsive CSS, accessibility, and a complete client-side shopping experience.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "improvement": "Project notes",
+        "improvementReason": [
+          "The project was created as a first-year e-commerce exam and remains a static demonstration application."
+        ],
+        "process": "The work combined brand development, Figma planning, responsive interface design, and modular JavaScript implementation."
+      },
       "featured": false,
       "dateCreated": "2025-05-20",
       "status": "archived"
@@ -592,6 +640,72 @@
         "repository": "https://github.com/larstp/Oslo-Community-Science-Museum"
       },
       "articlePath": "/projects/oslo-community-science-museum",
+      "article": {
+        "title": "Oslo Community Science Museum",
+        "subheading": "An interactive science museum website.",
+        "roles": ["Designer", "UI/UX", "Frontend developer"],
+        "logo": {
+          "src": "/images/projects/oslo-community-science-museum/logo.svg",
+          "alt": "Oslo Community Science Museum logo"
+        },
+        "image": {
+          "src": "/images/projects/oslo-community-science-museum/thumbnail.webp",
+          "alt": "Oslo Community Science Museum website",
+          "caption": "A responsive website for an interactive science museum in Oslo."
+        },
+        "images": [
+          {
+            "src": "/images/projects/oslo-community-science-museum/carousel/thumbnail.webp",
+            "alt": "Oslo Community Science Museum homepage",
+            "caption": "The museum homepage and visual identity.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/oslo-community-science-museum/carousel/elements.webp",
+            "alt": "Science museum interface elements",
+            "caption": "Interface elements used throughout the museum site.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/oslo-community-science-museum/carousel/events.webp",
+            "alt": "Science museum events page",
+            "caption": "Events and visitor information.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/oslo-community-science-museum/carousel/get-involved.webp",
+            "alt": "Science museum get involved page",
+            "caption": "Ways for visitors to get involved.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/oslo-community-science-museum/carousel/video-components.webp",
+            "alt": "Science museum video components",
+            "caption": "Media and video components from the museum experience.",
+            "fitted": false
+          }
+        ],
+        "description": "An accessible and engaging science museum website created for a semester project.",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "The Oslo Community Science Museum site introduces exhibitions, events, visitor information, and learning resources for children, families, teachers, and researchers.",
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": "The project demonstrates semantic HTML, responsive CSS, media-rich content, accessible navigation, and a clear information hierarchy.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "improvement": "Project notes",
+        "improvementReason": [
+          "The project is a fully static museum website created for NOROFF Semester Project 1."
+        ],
+        "process": "The work combined branding, content hierarchy, responsive implementation, and accessibility-focused interface design."
+      },
       "featured": false,
       "dateCreated": "2025-02-20",
       "status": "archived"
@@ -610,14 +724,206 @@
         "repository": "https://github.com/larstp/RainyDays"
       },
       "articlePath": "/projects/rainy-days",
+      "article": {
+        "title": "RainyDays",
+        "subheading": "An outdoor clothing e-commerce experience.",
+        "roles": ["Designer", "UI/UX", "Frontend developer"],
+        "logo": {
+          "src": "/images/projects/rainy-days/logo.svg",
+          "alt": "RainyDays logo"
+        },
+        "image": {
+          "src": "/images/projects/rainy-days/thumbnail.webp",
+          "alt": "RainyDays outdoor clothing store",
+          "caption": "RainyDays is a responsive outdoor clothing store built with HTML, CSS, and JavaScript."
+        },
+        "images": [
+          {
+            "src": "/images/projects/rainy-days/carousel/thumbnail.webp",
+            "alt": "RainyDays storefront",
+            "caption": "The RainyDays storefront and product browsing experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/rainy-days/carousel/product.webp",
+            "alt": "RainyDays product page",
+            "caption": "A detailed RainyDays product page.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/rainy-days/carousel/login.webp",
+            "alt": "RainyDays login page",
+            "caption": "The RainyDays account login experience.",
+            "fitted": false
+          }
+        ],
+        "description": "A static outdoor clothing store demonstrating API-driven products and client-side shopping flows.",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "RainyDays lets users browse outdoor jackets, view product details, manage a cart, and complete a mock checkout process.",
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": "The project demonstrates modular JavaScript, responsive CSS, API integration, mock authentication, cart logic, and accessible interface patterns.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "improvement": "Project notes",
+        "improvementReason": [
+          "The project was created for the NOROFF FED1 HTML, CSS, and JavaScript courses and is deployed through GitHub Pages."
+        ],
+        "process": "The work combined Figma planning, responsive layout implementation, API-driven content, and client-side shopping interactions."
+      },
       "featured": false,
       "dateCreated": "2024-12-01",
+      "status": "archived"
+    },
+    {
+      "id": "smart-recipe-book",
+      "title": "Smart Recipe Book",
+      "projectType": "School project",
+      "description": "A recipe management application for discovering, creating, editing, and organizing recipes.",
+      "image": {
+        "src": "/images/projects/smart-recipe-book/thumbnail.webp",
+        "alt": "Smart Recipe Book application"
+      },
+      "technologies": ["react", "typescript", "vite", "tailwind", "supabase"],
+      "links": {
+        "live": "",
+        "repository": "https://github.com/larstp/Smart-Recipe-Book"
+      },
+      "articlePath": "/projects/smart-recipe-book",
+      "article": {
+        "title": "Smart Recipe Book",
+        "subheading": "A recipe management and meal planning application.",
+        "roles": ["Frontend developer", "UI/UX designer"],
+        "logo": {
+          "src": "/images/projects/smart-recipe-book/logo.svg",
+          "alt": "Smart Recipe Book chef hat logo"
+        },
+        "image": {
+          "src": "/images/projects/smart-recipe-book/carousel/recipe.webp",
+          "alt": "Smart Recipe Book recipe view",
+          "caption": "Smart Recipe Book helps users discover, organize, and plan meals."
+        },
+        "images": [
+          {
+            "src": "/images/projects/smart-recipe-book/carousel/recipe.webp",
+            "alt": "Smart Recipe Book recipe view",
+            "caption": "Browsing and managing recipes.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/smart-recipe-book/carousel/shoppinglist.webp",
+            "alt": "Smart Recipe Book shopping list",
+            "caption": "Planning ingredients with a shopping list.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/smart-recipe-book/carousel/user.webp",
+            "alt": "Smart Recipe Book user area",
+            "caption": "The user account and recipe management experience.",
+            "fitted": false
+          }
+        ],
+        "description": "A full recipe management application with favorites, pantry items, comments, and meal planning.",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "Smart Recipe Book lets users browse recipes, create and edit their own recipes, save favorites, manage pantry items, write comments, and plan meals.",
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": "The project demonstrates typed React interfaces, API-backed content, authenticated flows, responsive layouts, accessible forms, and reusable Storybook components.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "improvement": "Project notes",
+        "improvementReason": [
+          "The original repository and planning board are private, so some project history and pull request references are kept as documentation only."
+        ],
+        "process": "The work combined application planning, reusable React components, authenticated user flows, API integration, and responsive interface refinement."
+      },
+      "featured": true,
+      "dateCreated": "2025-06-01",
+      "status": "active"
+    },
+    {
+      "id": "ratatosk",
+      "title": "Ratatosk News",
+      "projectType": "School project",
+      "description": "A simple news platform built with HTML, CSS, JavaScript, and Supabase.",
+      "image": {
+        "src": "/images/projects/ratatosk/Ratatosk.svg",
+        "alt": "Ratatosk News logo"
+      },
+      "technologies": ["html", "css", "javascript", "tailwind", "supabase"],
+      "links": {
+        "live": "https://larstp.github.io/ratatosk-news",
+        "repository": "https://github.com/larstp/ratatosk-news"
+      },
+      "articlePath": "/projects/ratatosk",
+      "article": {
+        "title": "Ratatosk News",
+        "subheading": "A simple authenticated news platform.",
+        "roles": ["Frontend developer", "UI/UX designer"],
+        "logo": {
+          "src": "/images/projects/ratatosk/Ratatosk.svg",
+          "alt": "Ratatosk News logo"
+        },
+        "image": {
+          "src": "/images/projects/ratatosk/Ratatosk.svg",
+          "alt": "Ratatosk News logo",
+          "caption": "Ratatosk News is a small Supabase-powered news platform."
+        },
+        "description": "A simple news platform with authentication, persistent posts, and member interactions.",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "Ratatosk News allows users to register, verify their accounts, log in, and interact with posts stored in Supabase. Authenticated members can create and delete posts.",
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": "The project demonstrates vanilla JavaScript, Tailwind CSS, Supabase authentication, database persistence, and clear authenticated navigation states.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "improvement": "Project notes",
+        "improvementReason": [
+          "The project was a quick course assignment with a small, focused feature set."
+        ],
+        "process": "The work focused on connecting a static frontend to Supabase authentication and data persistence while keeping the main news flows simple."
+      },
+      "featured": false,
+      "dateCreated": "2025-04-01",
       "status": "archived"
     }
   ],
   "settings": {
     "maxFeaturedProjects": 3,
     "sortBy": "dateCreated",
-    "sortOrder": "desc"
+    "sortOrder": "desc",
+    "projectOrder": [
+      "holidaze",
+      "slovstuggu-gcg",
+      "smart-recipe-book",
+      "mimir",
+      "butta",
+      "barter",
+      "e-co",
+      "oslo-community-science-museum",
+      "rainy-days",
+      "ratatosk"
+    ]
   }
 }

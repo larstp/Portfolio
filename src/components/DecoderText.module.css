@@ -2,6 +2,15 @@
   white-space: pre;
 }
 
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.wordSpace {
+  white-space: pre;
+}
+
 .slot {
   position: relative;
   display: inline-block;

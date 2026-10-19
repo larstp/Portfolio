@@ -91,6 +91,7 @@ function Article() {
                 startOnView
                 stagger={38}
                 duration={320}
+                className={styles.articleTitle}
               />
             </h1>
             <h4 className={styles.subheading}>{article.subheading}</h4>
