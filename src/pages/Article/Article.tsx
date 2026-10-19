@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import type { MouseEvent } from "react";
 import { Button, ButtonLink } from "../../components/Button";
 import ArticleSection from "../../components/ArticleSection";
+import DecoderText from "../../components/DecoderText";
 import TechnologyPills from "../../components/TechnologyPills";
 import { getProjectById } from "../../data/projects";
 import { smoothScrollTo } from "../../utils/smoothScroll";
@@ -80,8 +81,17 @@ function Article() {
         </Link>
         <div className={styles.articleHeader}>
           <div className={styles.articleHeading}>
-            <p className={styles.eyebrow}>Project article</p>
-            <h1>{article.title}</h1>
+            <p className={styles.eyebrow}>
+              <DecoderText text="Project article" startOnView />
+            </p>
+            <h1>
+              <DecoderText
+                text={article.title}
+                startOnView
+                stagger={38}
+                duration={320}
+              />
+            </h1>
             <h4 className={styles.subheading}>{article.subheading}</h4>
             <TechnologyPills technologiesUsed={project.technologies} />
           </div>
