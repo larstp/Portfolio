@@ -1,4 +1,5 @@
 import styles from "./ArticleSection.module.css";
+import ImageCarousel from "./ImageCarousel";
 
 /** Content and optional media used to render one Article narrative section. */
 export type ArticleSectionData = {
@@ -9,6 +10,11 @@ export type ArticleSectionData = {
     alt: string;
     caption?: string;
   } | null;
+  images?: {
+    src: string;
+    alt: string;
+    caption?: string;
+  }[];
   imagePosition?: "left" | "right" | "below";
 };
 
@@ -42,7 +48,11 @@ function ArticleSection({ section }: ArticleSectionProps) {
           <p>{section.paragraph}</p>
         )}
       </div>
-      {section.image ? (
+      {section.images && section.images.length > 0 ? (
+        <figure className={styles.imageBlock}>
+          <ImageCarousel images={section.images} />
+        </figure>
+      ) : section.image ? (
         <figure className={styles.imageBlock}>
           <img src={section.image.src} alt={section.image.alt} />
           {section.image.caption ? (

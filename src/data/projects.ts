@@ -18,6 +18,12 @@ export type ProjectArticle = {
     alt: string;
     caption: string;
   } | null;
+  images?: {
+    src: string;
+    alt: string;
+    caption?: string;
+    fitted?: boolean;
+  }[];
   description: string;
   improvement: string;
   improvementReason: string[];

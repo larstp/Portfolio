@@ -173,7 +173,7 @@
   margin: 4rem 0 0;
 }
 
-.heroImage img,
+.heroImage > img,
 .imagePlaceholder {
   display: block;
   width: 100%;

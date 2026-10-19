@@ -4,6 +4,7 @@ import type { MouseEvent } from "react";
 import { Button, ButtonLink } from "../../components/Button";
 import ArticleSection from "../../components/ArticleSection";
 import DecoderText from "../../components/DecoderText";
+import ImageCarousel from "../../components/ImageCarousel";
 import TechnologyPills from "../../components/TechnologyPills";
 import { getProjectById } from "../../data/projects";
 import { smoothScrollTo } from "../../utils/smoothScroll";
@@ -143,7 +144,11 @@ function Article() {
           </div>
         </div>
 
-        {article.image ? (
+        {article.images && article.images.length > 0 ? (
+          <figure className={styles.heroImage}>
+            <ImageCarousel images={article.images} />
+          </figure>
+        ) : article.image ? (
           <figure className={styles.heroImage}>
             <img src={article.image.src} alt={article.image.alt} />
             <figcaption>{article.image.caption}</figcaption>

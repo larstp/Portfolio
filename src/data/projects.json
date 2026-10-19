@@ -3,7 +3,7 @@
     {
       "id": "mimir",
       "title": "Mimir",
-      "projectType": "POR2",
+      "projectType": "School project",
       "description": "Mimir is a social media platform I built to explore CRUD operations and responsive front-end development.",
       "image": {
         "src": "/images/projects/mimir/thumbnail.webp",
@@ -28,6 +28,26 @@
           "alt": "Detailed screenshot of the Mimir platform",
           "caption": "Mimir is a dark and modern social media platform built for the JS2, CSS Frameworks & POR2 assignments."
         },
+        "images": [
+          {
+            "src": "/images/projects/mimir/thumbnail.webp",
+            "alt": "Mimir landing page",
+            "caption": "Mimir's landing page and visual identity.",
+            "fitted": true
+          },
+          {
+            "src": "/images/projects/mimir/carousel/mimir-post.webp",
+            "alt": "Mimir post interface",
+            "caption": "A Mimir post view with social interactions.",
+            "fitted": true
+          },
+          {
+            "src": "/images/projects/mimir/carousel/mimir-user.webp",
+            "alt": "Mimir user profile",
+            "caption": "A Mimir user profile and content view.",
+            "fitted": false
+          }
+        ],
         "description": "A social media platform",
         "sections": [
           {
@@ -55,11 +75,7 @@
               "The project uses JavaScript with ES6 modules, HTML, Tailwind CSS, and the Noroff Social API. It is deployed as a static site through Vercel.",
               "Mimir demonstrates how a project can grow through several stages: first establishing reliable functionality, then improving the visual system, and finally refining the details that make the application feel complete and presentable."
             ],
-            "image": {
-              "src": "/images/projects/mimir/carousel/mimir-post.webp",
-              "alt": "Mimir post interface",
-              "caption": "A Mimir post view with social interactions."
-            },
+            "image": null,
             "imagePosition": "left"
           }
         ],
@@ -114,6 +130,26 @@
           "alt": "Image of the Butta landing page",
           "caption": "Butta was a quick project where I explored component-driven interfaces, structured frontend code, and practical problem solving in a JavaScript framework context."
         },
+        "images": [
+          {
+            "src": "/images/projects/butta/carousel/butta-hero.webp",
+            "alt": "Butta product browsing page",
+            "caption": "The Butta product browsing experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/butta/carousel/butta-product.webp",
+            "alt": "Butta product details page",
+            "caption": "A detailed product view in Butta.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/butta/carousel/butta-cart.webp",
+            "alt": "Butta shopping cart",
+            "caption": "The Butta cart and checkout flow.",
+            "fitted": false
+          }
+        ],
         "sections": [
           {
             "heading": "Project overview",
@@ -154,14 +190,14 @@
         ],
         "process": "The project focused on translating requirements into reusable components, organizing the interface, and refining the experience through testing and iteration."
       },
-      "featured": true,
+      "featured": false,
       "dateCreated": "2025-11-01",
-      "status": "active"
+      "status": "archived"
     },
     {
       "id": "barter",
       "title": "Barter",
-      "projectType": "POR2",
+      "projectType": "School project",
       "description": "A semester project focused on creating a clear and accessible web experience for a online auction house.",
       "image": {
         "src": "/images/projects/barter/thumbnail.webp",
@@ -186,6 +222,44 @@
           "alt": "Barter project article image coming soon",
           "caption": "The Barter project image will be added here."
         },
+        "images": [
+          {
+            "src": "/images/projects/barter/carousel/barter-hero.webp",
+            "alt": "Barter auction house landing page",
+            "caption": "The Barter auction house landing page.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/barter/carousel/barter-auctions.webp",
+            "alt": "Barter auctions page",
+            "caption": "Browsing available auctions in Barter.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/barter/carousel/barter-listing-cards.webp",
+            "alt": "Barter listing cards",
+            "caption": "Auction listing cards and item details.",
+            "fitted": true
+          },
+          {
+            "src": "/images/projects/barter/carousel/barter-bidding-cards.webp",
+            "alt": "Barter bidding cards",
+            "caption": "Bidding interactions in Barter.",
+            "fitted": true
+          },
+          {
+            "src": "/images/projects/barter/carousel/barter-user.webp",
+            "alt": "Barter user profile",
+            "caption": "The Barter user profile experience.",
+            "fitted": true
+          },
+          {
+            "src": "/images/projects/barter/carousel/barter-auction-specific.webp",
+            "alt": "Barter auction detail page",
+            "caption": "A focused auction detail view.",
+            "fitted": true
+          }
+        ],
         "sections": [
           {
             "heading": "Project overview",
@@ -274,6 +348,26 @@
           "alt": "A modern and high-tech landing page",
           "caption": "A modern and responsive interface for trading Gundam GCG cards"
         },
+        "images": [
+          {
+            "src": "/images/projects/slovstuggu-gcg/carousel/gcg-hero.webp",
+            "alt": "Sløvstuggu GCG landing page",
+            "caption": "The Sløvstuggu GCG trading network landing page.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/slovstuggu-gcg/carousel/gcg-marketplace.webp",
+            "alt": "Sløvstuggu GCG marketplace",
+            "caption": "The Sløvstuggu GCG marketplace experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/slovstuggu-gcg/carousel/gcg-user.webp",
+            "alt": "Sløvstuggu GCG user area",
+            "caption": "The collector-focused user experience.",
+            "fitted": false
+          }
+        ],
         "sections": [
           {
             "heading": "A home for Gundam Card Game collectors",
@@ -360,6 +454,50 @@
           "alt": "Holidaze booking platform in dark mode",
           "caption": "Holidaze provides separate customer and venue-manager experiences."
         },
+        "images": [
+          {
+            "src": "/images/projects/holidaze/thumbnail.webp",
+            "alt": "Holidaze booking platform in dark mode",
+            "caption": "The Holidaze booking platform in dark mode.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-hero-darkmode.webp",
+            "alt": "Holidaze booking platform in dark mode",
+            "caption": "The Holidaze booking platform in dark mode.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-home.webp",
+            "alt": "Holidaze home page",
+            "caption": "The Holidaze accommodation discovery experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-dashboard.webp",
+            "alt": "Holidaze dashboard",
+            "caption": "Dashboard views for managing venues and bookings.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-search.webp",
+            "alt": "Holidaze venue search",
+            "caption": "Search and filtering for venue discovery.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-login.webp",
+            "alt": "Holidaze login page",
+            "caption": "The Holidaze account access experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-venues.webp",
+            "alt": "Holidaze venue management",
+            "caption": "Venue management tools for hosts.",
+            "fitted": false
+          }
+        ],
         "sections": [
           {
             "heading": "Project overview",
