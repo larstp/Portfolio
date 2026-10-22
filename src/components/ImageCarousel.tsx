@@ -106,7 +106,7 @@ function ImageCarousel({ images }: ImageCarouselProps) {
             type="button"
             aria-label={`Show image ${index + 1}`}
             aria-current={index === activeIndex ? "true" : undefined}
-            key={slide.src}
+            key={`${slide.src}-${index}`}
             onClick={() => showSlide(index)}
           />
         ))}

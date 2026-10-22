@@ -1,273 +1,161 @@
-# larstp - Portfolio
+# Lars Torp Pettersen | Portfolio
 
 <p align="center">
-	<img
-		src="documentation/portfolio.webp"
-		alt="Screenshot of the Lars Torp Pettersen portfolio"
-		width="100%"
-	/>
+  <img
+    src="documentation/portfolio.webp"
+    alt="Screenshot of the Lars Torp Pettersen portfolio"
+    width="100%"
+  />
 </p>
 
-Personal portfolio website for Lars Torp Pettersen, a junior front-end developer based in Oslo with a background in cinematography and a strong focus on design.
+This is my personal portfolio as a front-end developer based in Oslo, with a background in cinematography and a strong interest in design.
 
-The portfolio presents selected projects from the Front-End Development course at NOROFF and is built as a React and TypeScript application with Vite.
-
-This repository is the React-based successor to my original portfolio site, [larstp.github.io](https://github.com/larstp/larstp.github.io). It carries forward the earlier portfolio's visual direction, project-management ideas, and selected design patterns while rebuilding the experience with React, TypeScript, and Vite.
+Feel free to explore the code, copy ideas, or adapt parts of the project for your own work. The site presents projects through a responsive React experience with dedicated project articles, interactive media, and JSON-backed content.
 
 ## Live Site
 
 [larstp.com](https://larstp.com)
 
-## Featured Projects
+## Built With
 
-- [Mimir](https://mimir.larstp.com) - social platform focused on API integration and CRUD functionality
-- [Butta](https://butta.larstp.com) - JavaScript framework project
-- [Barter](https://barter.larstp.com) - online auction house experience
-
-Each project has a clickable teaser card on the home page and a dedicated Article page with additional project information.
-
-## Technology
-
-- React
-- TypeScript
+- React 19 and TypeScript
 - Vite
 - React Router
+- Motion
 - Plain CSS and CSS Modules
-- JSON-backed project and Article content
-- Vercel Analytics
-- Web3Forms for contact form submissions
+- JSON-backed project data
+- Vercel Analytics and Web3Forms
 - Vercel deployment
 
-## Features
+## Highlights
 
 - Responsive, mobile-first layout
-- Hero section with staged loading animation
-- Responsive Header with mobile navigation
-- Active section navigation
-- Custom smooth scrolling
-- Animated two-layer logo background on the Home page
-- Featured project cards with technology pills
-- Clickable project cards with separate Live and Repo actions
-- Reusable Article page template
-- JSON-driven project content
-- Article image, logo, role, section, and improvement support
-- Copy-link action on Article pages
-- Contact form with Web3Forms integration
-- Skills and Technologies section with responsive icon layout
-- Favicon, manifest, robots.txt, and sitemap.xml
-- Reduced-motion support
-- Keyboard-accessible navigation and interactive elements
+- DecoderText animations for Hero, Article, and section headings
+- Pixelated interactive portrait effect
+- Animated background treatment
+- Project cards with technology metadata and separate live/repository actions
+- JSON-driven Article pages with image carousels
+- Configurable fitted or cover-style carousel images
+- Accessible navigation, forms, labels, focus states, and reduced-motion behavior
+- SEO metadata, sitemap, robots file, manifest, and favicon
 
-## Project Structure
+## Getting Started
 
-```text
-src/
-├── components/
-│   ├── ArticleSection.tsx
-│   ├── Button.tsx
-│   ├── ContactSection.tsx
-│   ├── FeaturedProjects.tsx
-│   ├── Footer.tsx
-│   ├── Header.tsx
-│   ├── Hero.tsx
-│   ├── ProjectCard.tsx
-│   ├── SectionHeader.tsx
-│   ├── SkillsSection.tsx
-│   └── ScrollIndicator.tsx
-├── data/
-│   ├── projects.json
-│   ├── project-template.json
-│   ├── skills.ts
-│   └── technologies.json
-├── hooks/
-│   └── useActiveSection.ts
-├── layouts/
-│   └── SiteLayout.tsx
-├── lib/
-│   ├── constants/
-│   │   └── navigation.ts
-│   └── services/
-│       └── web3forms.ts
-├── pages/
-│   ├── Article/
-│   └── Home/
-├── utils/
-│   └── smoothScroll.ts
-├── App.tsx
-├── main.css
-└── main.tsx
+```bash
+npm install
+npm run dev
 ```
 
-Component styles are kept close to their components through CSS Modules. `main.css` contains the global design tokens, font loading, reset, accessibility focus styles, and shared foundations.
+The development server prints the local URL in the terminal.
+
+### Environment Variables
+
+The contact form uses Web3Forms. Create `.env.local` in the repository root:
+
+```env
+VITE_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
+```
+
+The same variable must be configured in the Vercel project for deployed form submissions.
 
 ## Project Data
 
-Project and technology content is stored in JSON:
+Project content lives in:
 
 ```text
 src/data/projects.json
 src/data/technologies.json
 ```
 
-The Home page displays projects where both conditions are true:
+Home projects must use both of these values:
 
 ```json
 "featured": true,
 "status": "active"
 ```
 
-Archived projects remain in the JSON with:
+The project order is controlled through `settings.projectOrder`.
 
-```json
-"featured": false,
-"status": "archived"
-```
+### Add a Project
 
-The complete manual project-entry template is available at [documentation/project-template.json](documentation/project-template.json).
-
-The manual workflow is documented in [documentation/add-project-howto.md](documentation/add-project-howto.md).
-
-## Adding a Project
-
-1. Add project images to `public/images/projects/`.
-2. Add project logos to `public/images/projects/logos/` when needed.
-3. Keep thumbnails and Article images in `.webp`, `.png`, or `.jpeg` format and below 200 KB.
-4. Copy the object from `documentation/project-template.json` into `src/data/projects.json`.
-5. Add the correct technology IDs from `src/data/technologies.json`.
-6. Set `featured` and `status` appropriately.
-7. Run `npm run validate-data` and the validation commands below.
-
-For the interactive workflow, run `npm run add-project`. The CLI creates the
-full card and Article object, supports carousel metadata, preserves archived
-projects, and validates the JSON before keeping changes.
-
-## Local Development
-
-Install dependencies:
+Interactive workflow:
 
 ```bash
-npm install
+npm run add-project
 ```
 
-Start the development server:
+Validation:
 
 ```bash
-npm run dev
+npm run validate-data
 ```
 
-The site is then available at the local Vite URL shown in the terminal.
+The generator supports project cards, Article content, carousel images, fitted-image settings, archived projects, and project ordering. It prints a confirmation summary and validates the data before keeping changes.
 
-## Environment Variables
+The full workflow and reusable template are documented here:
 
-The contact form uses Web3Forms. Create a local `.env.local` file in the project root:
+- [Add-project guide](documentation/add-project-howto.md)
+- [Project template](documentation/project-template.json)
 
-```env
-VITE_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
-```
-
-`.env.local` is ignored by Git. The same variable must be added to the Vercel project environment for deployed form submissions.
-
-## Validation Commands
-
-Typecheck the project:
+## Validation
 
 ```bash
 npm run typecheck
-```
-
-Run ESLint:
-
-```bash
 npm run lint
-```
-
-Build for production:
-
-```bash
 npm run build
 ```
 
-Preview the production build locally:
+Preview a production build with:
 
 ```bash
 npm run preview
 ```
 
-## Vercel Deployment
+## Deployment
 
-The project is configured for Vercel through [vercel.json](vercel.json):
+The project is configured for Vercel through [vercel.json](vercel.json). The configuration builds `dist` and rewrites application routes for the React Router SPA.
 
-- Build command: `npm run build`
-- Output directory: `dist`
-- SPA rewrites for React Router routes
-
-Current public SEO files include:
+Public SEO files include:
 
 - `/robots.txt`
 - `/sitemap.xml`
 - `/icons/favicon/site.webmanifest`
 
-## Accessibility and Performance
-
-The project includes:
-
-- Semantic landmarks and headings
-- Accessible labels for form fields and navigation
-- Visible keyboard focus states
-- External link security attributes
-- Meaningful image alt text
-- Reduced-motion support
-- Lazy loading for project-card images
-- Responsive layouts across mobile, tablet, and desktop
-- Optimized image-size requirements for submission assets
-
-## POR2 Specific Links
-
 <details>
-	<summary>View project repositories, POR2 pull requests, previous styling branches, and live sites</summary>
+  <summary>Project structure</summary>
 
-### Mimir
+```text
+src/
+├── components/       Reusable UI components and CSS Modules
+├── data/             Projects, technologies, and skills
+├── hooks/            Shared React hooks
+├── layouts/          Site-wide layout and navigation
+├── lib/              Constants and external services
+├── pages/            Home and Article routes
+├── utils/             Shared browser utilities
+├── App.tsx
+├── main.css
+└── main.tsx
 
-- [Repository](https://github.com/larstp/Mimir)
-- [POR2 fixes pull request](https://github.com/larstp/Mimir/pull/7)
-- [Old styling branch](https://github.com/larstp/Mimir/tree/old-styling)
-- [Live site](https://mimir.larstp.com/)
+public/
+├── fonts/
+├── icons/
+└── images/projects/
 
-### Butta
-
-- [Repository](https://github.com/larstp/Butta)
-- [POR2 fixes pull request](https://github.com/larstp/Butta/pull/1)
-- [Old styling branch](https://github.com/larstp/Butta/tree/old-styling)
-- [Live site](https://butta.larstp.com/)
-
-### Barter
-
-- [Repository](https://github.com/larstp/Barter)
-- [POR2 fixes pull request](https://github.com/larstp/Barter/pull/59)
-- [Old styling branch](https://github.com/larstp/Barter/tree/old-styling)
-- [Live site](https://barter.larstp.com/)
+tools/
+├── add-project.mjs
+└── validate-projects.mjs
+```
 
 </details>
 
-## AI Log
+<details>
+  <summary>Accessibility and performance</summary>
 
-I have made use of AI in debugging, copy, and transferring help with JSON elements and how to implement them in React, as that is not something we have ever touched on in class. For the full AI log, see [AI-log.md](documentation/AI-log.md).
+The interface uses semantic landmarks and headings, accessible form labels, visible focus states, meaningful image alternatives, keyboard-friendly controls, responsive layouts, lazy-loaded project images, and reduced-motion handling.
 
-## Deferred Work
+</details>
 
-The following work is intentionally postponed until the required assignment is complete:
+## Inspiration and Credits
 
-- Interactive `npm run add-project` script
-- JSON validation and sorting scripts
-- Project ID generation
-- GitHub Actions project automation
-- Additional API integrations
-- Light theme
-- DecoderText hero enhancement
-- Additional Article carousel content
-
-## License and Credits
-
-This project is released under the repository license.
-
-Design inspiration, external assets, and borrowed components should be documented in the project documentation before final submission. Any reused open-source implementation must retain its required attribution and must not present another developer's projects or work as the author's own.
+The visual direction draws from personal design work and public portfolio references. External assets and open-source resources are used with appropriate attribution and licensing.

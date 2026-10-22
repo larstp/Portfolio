@@ -7,6 +7,7 @@ type DecoderTextProps = {
   stagger?: number;
   duration?: number;
   startOnView?: boolean;
+  onComplete?: () => void;
   className?: string;
 };
 
@@ -23,22 +24,37 @@ function DecoderText({
   stagger = 35,
   duration = 220,
   startOnView = false,
+  onComplete,
   className,
 }: DecoderTextProps) {
   const decoderRef = useRef<HTMLSpanElement>(null);
-  const [started, setStarted] = useState(!startOnView);
+  const onCompleteRef = useRef(onComplete);
+  const [reducedMotion] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
+  const [started, setStarted] = useState(!startOnView || reducedMotion);
   const [characters, setCharacters] = useState(() =>
-    Array.from(text, (character) => (character === " " ? " " : randomSymbol())),
+    reducedMotion
+      ? Array.from(text)
+      : Array.from(text, (character) =>
+          character === " " ? " " : randomSymbol(),
+        ),
   );
   const [decoded, setDecoded] = useState(() =>
-    Array.from(text, (character) => character === " "),
+    Array.from(text, (character) => reducedMotion || character === " "),
   );
   const [visible, setVisible] = useState(() =>
-    Array.from(text, (character) => character === " "),
+    Array.from(text, (character) => reducedMotion || character === " "),
   );
 
   useEffect(() => {
-    if (!startOnView) return;
+    onCompleteRef.current = onComplete;
+  }, [onComplete]);
+
+  useEffect(() => {
+    if (!startOnView || reducedMotion) return;
 
     const element = decoderRef.current;
     if (!element) return;
@@ -54,13 +70,27 @@ function DecoderText({
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, [startOnView]);
+  }, [reducedMotion, startOnView]);
 
   useEffect(() => {
     if (!started) return;
 
+    if (reducedMotion) {
+      onCompleteRef.current?.();
+      return;
+    }
+
     const timers: ReturnType<typeof setTimeout>[] = [];
     const intervals: ReturnType<typeof setInterval>[] = [];
+    const characterCount = Array.from(text).filter(
+      (character) => character !== " ",
+    ).length;
+    let completedCharacters = 0;
+
+    if (characterCount === 0) {
+      onCompleteRef.current?.();
+      return;
+    }
 
     Array.from(text).forEach((character, index) => {
       if (character === " ") return;
@@ -94,6 +124,10 @@ function DecoderText({
               next[index] = true;
               return next;
             });
+            completedCharacters += 1;
+            if (completedCharacters === characterCount) {
+              onCompleteRef.current?.();
+            }
           }, duration);
           timers.push(finishTimer);
         },
@@ -107,7 +141,7 @@ function DecoderText({
       timers.forEach(clearTimeout);
       intervals.forEach(clearInterval);
     };
-  }, [delay, duration, stagger, started, text]);
+  }, [delay, duration, reducedMotion, stagger, started, text]);
 
   return (
     <span
@@ -131,6 +165,8 @@ function DecoderText({
               {Array.from(word).map((character, index) => {
                 const currentIndex = wordStart + index;
                 const decodedCharacter = characters[currentIndex];
+                const isVisible = reducedMotion || visible[currentIndex];
+                const isDecoded = reducedMotion || decoded[currentIndex];
 
                 return (
                   <span className={styles.slot} key={currentIndex}>
@@ -139,8 +175,8 @@ function DecoderText({
                     </span>
                     <span
                       className={`${styles.visual} ${
-                        visible[currentIndex]
-                          ? decoded[currentIndex]
+                        isVisible
+                          ? isDecoded
                             ? styles.character
                             : styles.scrambling
                           : styles.hidden

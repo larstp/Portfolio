@@ -254,6 +254,25 @@
   margin-top: 1.5rem;
 }
 
+.contributorList {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  list-style: none;
+}
+
+.contributorList a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.contributorList a:hover,
+.contributorList a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .improvementDetails {
   margin-top: 3rem;
 }

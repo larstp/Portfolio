@@ -27,6 +27,10 @@ export type ProjectArticle = {
   description: string;
   improvement: string;
   improvementReason: string[];
+  contributors?: {
+    name: string;
+    url: string;
+  }[];
   pullRequest?: string | null;
   roles: string[];
   process: string;

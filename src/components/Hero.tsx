@@ -30,7 +30,7 @@ function Hero() {
           <p className={styles.eyebrow}>
             <DecoderText
               text="Lars Torp Pettersen"
-              delay={550}
+              delay={450}
               stagger={38}
               duration={320}
             />

@@ -175,6 +175,21 @@ function Article() {
                   {paragraph}
                 </p>
               ))}
+              {article.contributors && article.contributors.length > 0 ? (
+                <ul className={styles.contributorList}>
+                  {article.contributors.map((contributor) => (
+                    <li key={contributor.url}>
+                      <a
+                        href={contributor.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {contributor.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
               {article.pullRequest ? (
                 <ButtonLink
                   className={styles.improvementAction}

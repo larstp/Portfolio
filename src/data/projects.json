@@ -785,8 +785,8 @@
     {
       "id": "smart-recipe-book",
       "title": "Smart Recipe Book",
-      "projectType": "School project",
-      "description": "A recipe management application for discovering, creating, editing, and organizing recipes.",
+      "projectType": "School team project",
+      "description": "A collaborative school project focused on learning how to plan, build, review, and communicate as a development team.",
       "image": {
         "src": "/images/projects/smart-recipe-book/thumbnail.webp",
         "alt": "Smart Recipe Book application"
@@ -799,8 +799,8 @@
       "articlePath": "/projects/smart-recipe-book",
       "article": {
         "title": "Smart Recipe Book",
-        "subheading": "A recipe management and meal planning application.",
-        "roles": ["Frontend developer", "UI/UX designer"],
+        "subheading": "A shared recipe and kitchen management experience.",
+        "roles": ["Frontend developer", "Team contributor"],
         "logo": {
           "src": "/images/projects/smart-recipe-book/logo.svg",
           "alt": "Smart Recipe Book chef hat logo"
@@ -811,6 +811,12 @@
           "caption": "Smart Recipe Book helps users discover, organize, and plan meals."
         },
         "images": [
+          {
+            "src": "/images/projects/smart-recipe-book/thumbnail.webp",
+            "alt": "Smart Recipe Book landing page",
+            "caption": "A simple smart recipe book application for discovering and managing recipes.",
+            "fitted": false
+          },
           {
             "src": "/images/projects/smart-recipe-book/carousel/recipe.webp",
             "alt": "Smart Recipe Book recipe view",
@@ -830,26 +836,61 @@
             "fitted": false
           }
         ],
-        "description": "A full recipe management application with favorites, pantry items, comments, and meal planning.",
+        "description": "Smart Recipe Book is a collaborative school project for managing recipes, ingredients, favorites, comments, and meal plans. This repository is a public copy of the original GitHub Classroom project.",
         "sections": [
           {
             "heading": "Project overview",
-            "paragraph": "Smart Recipe Book lets users browse recipes, create and edit their own recipes, save favorites, manage pantry items, write comments, and plan meals.",
+            "paragraph": [
+              "Smart Recipe Book is a collaborative application for people who want to keep their recipes, ingredients, and meal plans in one place.",
+              "Together, our group built a friendly experience where users can discover recipes, create and edit their own, save favorites, manage pantry items, write comments, and plan meals.",
+              "The project was created as a school team project, with the main goal of learning how to work effectively with code and responsibilities shared across a development team."
+            ],
             "image": null,
             "imagePosition": "below"
           },
           {
-            "heading": "Technology and outcome",
-            "paragraph": "The project demonstrates typed React interfaces, API-backed content, authenticated flows, responsive layouts, accessible forms, and reusable Storybook components.",
+            "heading": "Working as a team",
+            "paragraph": [
+              "We worked side by side throughout the project, planning tasks and tracking progress in a shared GitHub Projects board.",
+              "We reviewed each other's pull requests and tried to keep the code, communication, and workflow as professional as possible while learning from one another."
+            ],
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Project scope",
+            "paragraph": [
+              "The application is not finished, and that was not the main goal of the project. The focus was on gaining experience working in a team, using a shared workflow, and contributing to a larger codebase.",
+              "This repository is copied from our private GitHub Classroom project and serves as my publicly accessible version of the work. The planned AI Recipe Generator section was not integrated because the class had not been prepared for that part of the project in time."
+            ],
             "image": null,
             "imagePosition": "below"
           }
         ],
-        "improvement": "Project notes",
+        "improvement": "Project team and notes",
         "improvementReason": [
-          "The original repository and planning board are private, so some project history and pull request references are kept as documentation only."
+          "Smart Recipe Book was built collaboratively by a small team. Visit the contributors' GitHub profiles below.",
+          "The public repository is a personal copy of the original private GitHub Classroom project."
         ],
-        "process": "The work combined application planning, reusable React components, authenticated user flows, API integration, and responsive interface refinement."
+        "contributors": [
+          {
+            "name": "larstp",
+            "url": "https://github.com/larstp"
+          },
+          {
+            "name": "emmelinlarina",
+            "url": "https://github.com/emmelinlarina"
+          },
+          {
+            "name": "Telecasteren",
+            "url": "https://github.com/telecasteren"
+          },
+          {
+            "name": "JB12-Art",
+            "url": "https://github.com/jb12-art"
+          }
+        ],
+        "process": "The project combined shared planning, feature development, review, testing, and continuous communication throughout the team."
       },
       "featured": true,
       "dateCreated": "2025-06-01",
