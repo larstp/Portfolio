@@ -127,7 +127,7 @@ The complete manual project-entry template is available at [documentation/projec
 
 The manual workflow is documented in [documentation/add-project-howto.md](documentation/add-project-howto.md).
 
-## Adding a Project Manually
+## Adding a Project
 
 1. Add project images to `public/images/projects/`.
 2. Add project logos to `public/images/projects/logos/` when needed.
@@ -135,9 +135,11 @@ The manual workflow is documented in [documentation/add-project-howto.md](docume
 4. Copy the object from `documentation/project-template.json` into `src/data/projects.json`.
 5. Add the correct technology IDs from `src/data/technologies.json`.
 6. Set `featured` and `status` appropriately.
-7. Run the validation commands below.
+7. Run `npm run validate-data` and the validation commands below.
 
-The future interactive `npm run add-project` workflow is intentionally deferred until after the assignment submission.
+For the interactive workflow, run `npm run add-project`. The CLI creates the
+full card and Article object, supports carousel metadata, preserves archived
+projects, and validates the JSON before keeping changes.
 
 ## Local Development
 

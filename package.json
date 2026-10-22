@@ -8,6 +8,8 @@
     "build": "tsc -b && vite build",
     "typecheck": "tsc -b --pretty false",
     "lint": "eslint .",
+    "add-project": "node tools/add-project.mjs",
+    "validate-data": "node tools/validate-projects.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

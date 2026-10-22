@@ -26,6 +26,14 @@
       "alt": "Description of the main article image",
       "caption": "Caption for the main article image."
     },
+    "images": [
+      {
+        "src": "/images/projects/project-id/carousel/main.webp",
+        "alt": "Description of the main carousel image",
+        "caption": "Caption for the main carousel image.",
+        "fitted": true
+      }
+    ],
     "sections": [
       {
         "heading": "Project overview",
