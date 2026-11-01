@@ -10,6 +10,10 @@
   gap: 4.5rem;
 }
 
+.categories > div {
+  width: 100%;
+}
+
 .category {
   width: 100%;
   text-align: center;

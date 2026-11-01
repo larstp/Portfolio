@@ -1,6 +1,20 @@
-# Add a Project Manually
+# Add a Project
 
-This guide covers the current manual workflow for adding a project. The interactive `npm run add-project` automation from the old portfolio is intentionally not included yet.
+This guide covers both the interactive and manual workflows for adding a project.
+
+## Interactive Workflow
+
+From the repository root, run:
+
+```bash
+npm run add-project
+```
+
+The CLI prompts for card metadata, links, technologies, Article content,
+sections, carousel images, and visibility. It prints the complete object before
+writing and runs the validator automatically. If validation fails, the JSON file is restored.
+
+Use the manual workflow below when you already have a prepared project object or need to make a small content edit.
 
 Use the complete copy-pasteable template here:
 
@@ -64,7 +78,7 @@ Do not add comments to JSON. JSON does not support comments. Use the existing `f
 - `article.logo`: Optional logo image and alt text.
 - `article.image`: Main Article image, alt text, and caption.
 - `article.sections`: Ordered Article content sections.
-- `article.carousel`: Optional additional images stored in the project `carousel` folder.
+- `article.images`: Optional hero carousel images stored in the project `carousel` folder. The first image is shown initially.
 - `article.pullRequest`: GitHub pull request URL, or `null` if there is none.
 - `article.improvement`: Collapsible assignment improvement title.
 - `article.improvementReason`: Array of paragraphs explaining the improvement.
@@ -95,6 +109,37 @@ Supported image positions are:
 
 Use `"image": null` when a section does not have an image yet.
 
+### Article Hero Carousel
+
+For multiple images at the top of the Article page, add an `images` array to
+the Article object:
+
+```json
+"images": [
+  {
+    "src": "/images/projects/my-project/carousel/hero.webp",
+    "alt": "My project landing page",
+    "caption": "The project landing page.",
+    "fitted": true
+  },
+  {
+    "src": "/images/projects/my-project/carousel/dashboard.webp",
+    "alt": "My project dashboard",
+    "caption": "The project dashboard.",
+    "fitted": false
+  }
+]
+```
+
+Use `"fitted": true` when the entire image should remain visible inside the
+hero frame. Use `false` when the image should fill the frame and may be
+cropped. Clicking the image advances the carousel; users can also use the
+side controls, dots, swipe gestures, and keyboard focus controls.
+
+When `article.images` is present, it is used instead of `article.image` for
+the large hero media. Keep `article.image` as a fallback for projects that
+only have one hero image.
+
 Add as many sections as the project needs. There is no fixed ten-section limit in the current structure.
 
 ## 5. Control Home Visibility
@@ -115,6 +160,23 @@ To keep it in the JSON but hide it from Featured Projects:
 
 The current Home page filters for projects where both `featured` is `true` and `status` is `active`.
 
+### Home Project Order
+
+The Home order is controlled by `settings.projectOrder` in
+`src/data/projects.json`. Add each project ID in the desired order:
+
+```json
+"settings": {
+  "maxFeaturedProjects": 3,
+  "sortBy": "dateCreated",
+  "sortOrder": "desc",
+  "projectOrder": ["holidaze", "slovstuggu-gcg", "my-project"]
+}
+```
+
+Projects not listed in `projectOrder` appear after the configured projects in
+their existing JSON order.
+
 ## 6. Validate the Change
 
 After editing the JSON, run:
@@ -123,6 +185,7 @@ After editing the JSON, run:
 npm run typecheck
 npm run build
 npm run lint
+npm run validate-data
 ```
 
 Check the following manually:

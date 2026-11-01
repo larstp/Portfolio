@@ -1,6 +1,8 @@
 import type { MouseEvent } from "react";
 import { smoothScrollTo } from "../utils/smoothScroll";
 import { ButtonLink } from "./Button";
+import DecoderText from "./DecoderText";
+import DitherVeil from "./DitherVeil";
 import styles from "./Hero.module.css";
 
 function Hero() {
@@ -25,11 +27,28 @@ function Hero() {
     >
       <div className={styles.heroFrame}>
         <div className={styles.titleBlock}>
-          <p className={styles.eyebrow}>Lars Torp Pettersen</p>
+          <p className={styles.eyebrow}>
+            <DecoderText
+              text="Lars Torp Pettersen"
+              delay={450}
+              stagger={38}
+              duration={320}
+            />
+          </p>
           <h1 className={styles.title}>
-            Front End
+            <DecoderText
+              text="Front End"
+              delay={950}
+              stagger={38}
+              duration={320}
+            />
             <br />
-            Developer
+            <DecoderText
+              text="Developer"
+              delay={1250}
+              stagger={38}
+              duration={320}
+            />
           </h1>
         </div>
 
@@ -87,10 +106,11 @@ function Hero() {
         </div>
 
         <div className={styles.portraitFrame}>
-          <img
+          <DitherVeil
             className={styles.portrait}
             src="/images/DSC03075-2.webp"
             alt="Lars Torp Pettersen"
+            reverse
           />
         </div>
       </div>

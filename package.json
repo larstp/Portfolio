@@ -8,11 +8,14 @@
     "build": "tsc -b && vite build",
     "typecheck": "tsc -b --pretty false",
     "lint": "eslint .",
+    "add-project": "node tools/add-project.mjs",
+    "validate-data": "node tools/validate-projects.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
-    "framer-motion": "^14.0.0",
+    "motion": "^14.1.0",
+    "ogl": "^1.0.11",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.4"

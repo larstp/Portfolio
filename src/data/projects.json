@@ -3,7 +3,7 @@
     {
       "id": "mimir",
       "title": "Mimir",
-      "projectType": "POR2",
+      "projectType": "School project",
       "description": "Mimir is a social media platform I built to explore CRUD operations and responsive front-end development.",
       "image": {
         "src": "/images/projects/mimir/thumbnail.webp",
@@ -28,6 +28,26 @@
           "alt": "Detailed screenshot of the Mimir platform",
           "caption": "Mimir is a dark and modern social media platform built for the JS2, CSS Frameworks & POR2 assignments."
         },
+        "images": [
+          {
+            "src": "/images/projects/mimir/thumbnail.webp",
+            "alt": "Mimir landing page",
+            "caption": "Mimir's landing page and visual identity.",
+            "fitted": true
+          },
+          {
+            "src": "/images/projects/mimir/carousel/mimir-post.webp",
+            "alt": "Mimir post interface",
+            "caption": "A Mimir post view with social interactions.",
+            "fitted": true
+          },
+          {
+            "src": "/images/projects/mimir/carousel/mimir-user.webp",
+            "alt": "Mimir user profile",
+            "caption": "A Mimir user profile and content view.",
+            "fitted": false
+          }
+        ],
         "description": "A social media platform",
         "sections": [
           {
@@ -55,11 +75,7 @@
               "The project uses JavaScript with ES6 modules, HTML, Tailwind CSS, and the Noroff Social API. It is deployed as a static site through Vercel.",
               "Mimir demonstrates how a project can grow through several stages: first establishing reliable functionality, then improving the visual system, and finally refining the details that make the application feel complete and presentable."
             ],
-            "image": {
-              "src": "/images/projects/mimir/carousel/mimir-post.webp",
-              "alt": "Mimir post interface",
-              "caption": "A Mimir post view with social interactions."
-            },
+            "image": null,
             "imagePosition": "left"
           }
         ],
@@ -114,6 +130,26 @@
           "alt": "Image of the Butta landing page",
           "caption": "Butta was a quick project where I explored component-driven interfaces, structured frontend code, and practical problem solving in a JavaScript framework context."
         },
+        "images": [
+          {
+            "src": "/images/projects/butta/carousel/butta-hero.webp",
+            "alt": "Butta product browsing page",
+            "caption": "The Butta product browsing experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/butta/carousel/butta-product.webp",
+            "alt": "Butta product details page",
+            "caption": "A detailed product view in Butta.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/butta/carousel/butta-cart.webp",
+            "alt": "Butta shopping cart",
+            "caption": "The Butta cart and checkout flow.",
+            "fitted": false
+          }
+        ],
         "sections": [
           {
             "heading": "Project overview",
@@ -154,14 +190,14 @@
         ],
         "process": "The project focused on translating requirements into reusable components, organizing the interface, and refining the experience through testing and iteration."
       },
-      "featured": true,
+      "featured": false,
       "dateCreated": "2025-11-01",
-      "status": "active"
+      "status": "archived"
     },
     {
       "id": "barter",
       "title": "Barter",
-      "projectType": "POR2",
+      "projectType": "School project",
       "description": "A semester project focused on creating a clear and accessible web experience for a online auction house.",
       "image": {
         "src": "/images/projects/barter/thumbnail.webp",
@@ -186,6 +222,44 @@
           "alt": "Barter project article image coming soon",
           "caption": "The Barter project image will be added here."
         },
+        "images": [
+          {
+            "src": "/images/projects/barter/carousel/barter-hero.webp",
+            "alt": "Barter auction house landing page",
+            "caption": "The Barter auction house landing page.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/barter/carousel/barter-auctions.webp",
+            "alt": "Barter auctions page",
+            "caption": "Browsing available auctions in Barter.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/barter/carousel/barter-listing-cards.webp",
+            "alt": "Barter listing cards",
+            "caption": "Auction listing cards and item details.",
+            "fitted": true
+          },
+          {
+            "src": "/images/projects/barter/carousel/barter-bidding-cards.webp",
+            "alt": "Barter bidding cards",
+            "caption": "Bidding interactions in Barter.",
+            "fitted": true
+          },
+          {
+            "src": "/images/projects/barter/carousel/barter-user.webp",
+            "alt": "Barter user profile",
+            "caption": "The Barter user profile experience.",
+            "fitted": true
+          },
+          {
+            "src": "/images/projects/barter/carousel/barter-auction-specific.webp",
+            "alt": "Barter auction detail page",
+            "caption": "A focused auction detail view.",
+            "fitted": true
+          }
+        ],
         "sections": [
           {
             "heading": "Project overview",
@@ -274,6 +348,26 @@
           "alt": "A modern and high-tech landing page",
           "caption": "A modern and responsive interface for trading Gundam GCG cards"
         },
+        "images": [
+          {
+            "src": "/images/projects/slovstuggu-gcg/carousel/gcg-hero.webp",
+            "alt": "Sløvstuggu GCG landing page",
+            "caption": "The Sløvstuggu GCG trading network landing page.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/slovstuggu-gcg/carousel/gcg-marketplace.webp",
+            "alt": "Sløvstuggu GCG marketplace",
+            "caption": "The Sløvstuggu GCG marketplace experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/slovstuggu-gcg/carousel/gcg-user.webp",
+            "alt": "Sløvstuggu GCG user area",
+            "caption": "The collector-focused user experience.",
+            "fitted": false
+          }
+        ],
         "sections": [
           {
             "heading": "A home for Gundam Card Game collectors",
@@ -360,6 +454,50 @@
           "alt": "Holidaze booking platform in dark mode",
           "caption": "Holidaze provides separate customer and venue-manager experiences."
         },
+        "images": [
+          {
+            "src": "/images/projects/holidaze/thumbnail.webp",
+            "alt": "Holidaze booking platform in dark mode",
+            "caption": "The Holidaze booking platform in dark mode.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-hero-darkmode.webp",
+            "alt": "Holidaze booking platform in dark mode",
+            "caption": "The Holidaze booking platform in dark mode.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-home.webp",
+            "alt": "Holidaze home page",
+            "caption": "The Holidaze accommodation discovery experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-dashboard.webp",
+            "alt": "Holidaze dashboard",
+            "caption": "Dashboard views for managing venues and bookings.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-search.webp",
+            "alt": "Holidaze venue search",
+            "caption": "Search and filtering for venue discovery.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-login.webp",
+            "alt": "Holidaze login page",
+            "caption": "The Holidaze account access experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/holidaze/carousel/holidaze-venues.webp",
+            "alt": "Holidaze venue management",
+            "caption": "Venue management tools for hosts.",
+            "fitted": false
+          }
+        ],
         "sections": [
           {
             "heading": "Project overview",
@@ -436,6 +574,54 @@
         "repository": "https://github.com/larstp/E-Co"
       },
       "articlePath": "/projects/e-co",
+      "article": {
+        "title": "E-Co",
+        "subheading": "A sustainable e-commerce experience.",
+        "roles": ["Designer", "UI/UX", "Frontend developer"],
+        "logo": {
+          "src": "/images/projects/e-co/logo.svg",
+          "alt": "E-Co logo"
+        },
+        "image": {
+          "src": "/images/projects/e-co/carousel/hero.webp",
+          "alt": "E-Co storefront",
+          "caption": "E-Co is a sustainable e-commerce concept built with HTML, CSS, and JavaScript."
+        },
+        "images": [
+          {
+            "src": "/images/projects/e-co/carousel/hero.webp",
+            "alt": "E-Co storefront",
+            "caption": "The E-Co storefront and product discovery experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/e-co/carousel/store.webp",
+            "alt": "E-Co product store",
+            "caption": "A closer look at the E-Co product store.",
+            "fitted": false
+          }
+        ],
+        "description": "A sustainable e-commerce website created for Project Exam 1.",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "E-Co is a responsive e-commerce concept focused on sustainable and affordable shopping. Users can browse products, view details, manage a cart, and complete a mock checkout flow.",
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": "The project demonstrates modular JavaScript, API-driven products, responsive CSS, accessibility, and a complete client-side shopping experience.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "improvement": "Project notes",
+        "improvementReason": [
+          "The project was created as a first-year e-commerce exam and remains a static demonstration application."
+        ],
+        "process": "The work combined brand development, Figma planning, responsive interface design, and modular JavaScript implementation."
+      },
       "featured": false,
       "dateCreated": "2025-05-20",
       "status": "archived"
@@ -454,6 +640,72 @@
         "repository": "https://github.com/larstp/Oslo-Community-Science-Museum"
       },
       "articlePath": "/projects/oslo-community-science-museum",
+      "article": {
+        "title": "Oslo Community Science Museum",
+        "subheading": "An interactive science museum website.",
+        "roles": ["Designer", "UI/UX", "Frontend developer"],
+        "logo": {
+          "src": "/images/projects/oslo-community-science-museum/logo.svg",
+          "alt": "Oslo Community Science Museum logo"
+        },
+        "image": {
+          "src": "/images/projects/oslo-community-science-museum/thumbnail.webp",
+          "alt": "Oslo Community Science Museum website",
+          "caption": "A responsive website for an interactive science museum in Oslo."
+        },
+        "images": [
+          {
+            "src": "/images/projects/oslo-community-science-museum/carousel/thumbnail.webp",
+            "alt": "Oslo Community Science Museum homepage",
+            "caption": "The museum homepage and visual identity.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/oslo-community-science-museum/carousel/elements.webp",
+            "alt": "Science museum interface elements",
+            "caption": "Interface elements used throughout the museum site.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/oslo-community-science-museum/carousel/events.webp",
+            "alt": "Science museum events page",
+            "caption": "Events and visitor information.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/oslo-community-science-museum/carousel/get-involved.webp",
+            "alt": "Science museum get involved page",
+            "caption": "Ways for visitors to get involved.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/oslo-community-science-museum/carousel/video-components.webp",
+            "alt": "Science museum video components",
+            "caption": "Media and video components from the museum experience.",
+            "fitted": false
+          }
+        ],
+        "description": "An accessible and engaging science museum website created for a semester project.",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "The Oslo Community Science Museum site introduces exhibitions, events, visitor information, and learning resources for children, families, teachers, and researchers.",
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": "The project demonstrates semantic HTML, responsive CSS, media-rich content, accessible navigation, and a clear information hierarchy.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "improvement": "Project notes",
+        "improvementReason": [
+          "The project is a fully static museum website created for NOROFF Semester Project 1."
+        ],
+        "process": "The work combined branding, content hierarchy, responsive implementation, and accessibility-focused interface design."
+      },
       "featured": false,
       "dateCreated": "2025-02-20",
       "status": "archived"
@@ -472,14 +724,247 @@
         "repository": "https://github.com/larstp/RainyDays"
       },
       "articlePath": "/projects/rainy-days",
+      "article": {
+        "title": "RainyDays",
+        "subheading": "An outdoor clothing e-commerce experience.",
+        "roles": ["Designer", "UI/UX", "Frontend developer"],
+        "logo": {
+          "src": "/images/projects/rainy-days/logo.svg",
+          "alt": "RainyDays logo"
+        },
+        "image": {
+          "src": "/images/projects/rainy-days/thumbnail.webp",
+          "alt": "RainyDays outdoor clothing store",
+          "caption": "RainyDays is a responsive outdoor clothing store built with HTML, CSS, and JavaScript."
+        },
+        "images": [
+          {
+            "src": "/images/projects/rainy-days/carousel/thumbnail.webp",
+            "alt": "RainyDays storefront",
+            "caption": "The RainyDays storefront and product browsing experience.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/rainy-days/carousel/product.webp",
+            "alt": "RainyDays product page",
+            "caption": "A detailed RainyDays product page.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/rainy-days/carousel/login.webp",
+            "alt": "RainyDays login page",
+            "caption": "The RainyDays account login experience.",
+            "fitted": false
+          }
+        ],
+        "description": "A static outdoor clothing store demonstrating API-driven products and client-side shopping flows.",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "RainyDays lets users browse outdoor jackets, view product details, manage a cart, and complete a mock checkout process.",
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": "The project demonstrates modular JavaScript, responsive CSS, API integration, mock authentication, cart logic, and accessible interface patterns.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "improvement": "Project notes",
+        "improvementReason": [
+          "The project was created for the NOROFF FED1 HTML, CSS, and JavaScript courses and is deployed through GitHub Pages."
+        ],
+        "process": "The work combined Figma planning, responsive layout implementation, API-driven content, and client-side shopping interactions."
+      },
       "featured": false,
       "dateCreated": "2024-12-01",
+      "status": "archived"
+    },
+    {
+      "id": "smart-recipe-book",
+      "title": "Smart Recipe Book",
+      "projectType": "School team project",
+      "description": "A collaborative school project focused on learning how to plan, build, review, and communicate as a development team.",
+      "image": {
+        "src": "/images/projects/smart-recipe-book/thumbnail.webp",
+        "alt": "Smart Recipe Book application"
+      },
+      "technologies": ["react", "typescript", "vite", "tailwind", "supabase"],
+      "links": {
+        "live": "",
+        "repository": "https://github.com/larstp/Smart-Recipe-Book"
+      },
+      "articlePath": "/projects/smart-recipe-book",
+      "article": {
+        "title": "Smart Recipe Book",
+        "subheading": "A shared recipe and kitchen management experience.",
+        "roles": ["Frontend developer", "Team contributor"],
+        "logo": {
+          "src": "/images/projects/smart-recipe-book/logo.svg",
+          "alt": "Smart Recipe Book chef hat logo"
+        },
+        "image": {
+          "src": "/images/projects/smart-recipe-book/carousel/recipe.webp",
+          "alt": "Smart Recipe Book recipe view",
+          "caption": "Smart Recipe Book helps users discover, organize, and plan meals."
+        },
+        "images": [
+          {
+            "src": "/images/projects/smart-recipe-book/thumbnail.webp",
+            "alt": "Smart Recipe Book landing page",
+            "caption": "A simple smart recipe book application for discovering and managing recipes.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/smart-recipe-book/carousel/recipe.webp",
+            "alt": "Smart Recipe Book recipe view",
+            "caption": "Browsing and managing recipes.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/smart-recipe-book/carousel/shoppinglist.webp",
+            "alt": "Smart Recipe Book shopping list",
+            "caption": "Planning ingredients with a shopping list.",
+            "fitted": false
+          },
+          {
+            "src": "/images/projects/smart-recipe-book/carousel/user.webp",
+            "alt": "Smart Recipe Book user area",
+            "caption": "The user account and recipe management experience.",
+            "fitted": false
+          }
+        ],
+        "description": "Smart Recipe Book is a collaborative school project for managing recipes, ingredients, favorites, comments, and meal plans. This repository is a public copy of the original GitHub Classroom project.",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": [
+              "Smart Recipe Book is a collaborative application for people who want to keep their recipes, ingredients, and meal plans in one place.",
+              "Together, our group built a friendly experience where users can discover recipes, create and edit their own, save favorites, manage pantry items, write comments, and plan meals.",
+              "The project was created as a school team project, with the main goal of learning how to work effectively with code and responsibilities shared across a development team."
+            ],
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Working as a team",
+            "paragraph": [
+              "We worked side by side throughout the project, planning tasks and tracking progress in a shared GitHub Projects board.",
+              "We reviewed each other's pull requests and tried to keep the code, communication, and workflow as professional as possible while learning from one another."
+            ],
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Project scope",
+            "paragraph": [
+              "The application is not finished, and that was not the main goal of the project. The focus was on gaining experience working in a team, using a shared workflow, and contributing to a larger codebase.",
+              "This repository is copied from our private GitHub Classroom project and serves as my publicly accessible version of the work. The planned AI Recipe Generator section was not integrated because the class had not been prepared for that part of the project in time."
+            ],
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "improvement": "Project team and notes",
+        "improvementReason": [
+          "Smart Recipe Book was built collaboratively by a small team. Visit the contributors' GitHub profiles below.",
+          "The public repository is a personal copy of the original private GitHub Classroom project."
+        ],
+        "contributors": [
+          {
+            "name": "larstp",
+            "url": "https://github.com/larstp"
+          },
+          {
+            "name": "emmelinlarina",
+            "url": "https://github.com/emmelinlarina"
+          },
+          {
+            "name": "Telecasteren",
+            "url": "https://github.com/telecasteren"
+          },
+          {
+            "name": "JB12-Art",
+            "url": "https://github.com/jb12-art"
+          }
+        ],
+        "process": "The project combined shared planning, feature development, review, testing, and continuous communication throughout the team."
+      },
+      "featured": true,
+      "dateCreated": "2025-06-01",
+      "status": "active"
+    },
+    {
+      "id": "ratatosk",
+      "title": "Ratatosk News",
+      "projectType": "School project",
+      "description": "A simple news platform built with HTML, CSS, JavaScript, and Supabase.",
+      "image": {
+        "src": "/images/projects/ratatosk/Ratatosk.svg",
+        "alt": "Ratatosk News logo"
+      },
+      "technologies": ["html", "css", "javascript", "tailwind", "supabase"],
+      "links": {
+        "live": "https://larstp.github.io/ratatosk-news",
+        "repository": "https://github.com/larstp/ratatosk-news"
+      },
+      "articlePath": "/projects/ratatosk",
+      "article": {
+        "title": "Ratatosk News",
+        "subheading": "A simple authenticated news platform.",
+        "roles": ["Frontend developer", "UI/UX designer"],
+        "logo": {
+          "src": "/images/projects/ratatosk/Ratatosk.svg",
+          "alt": "Ratatosk News logo"
+        },
+        "image": {
+          "src": "/images/projects/ratatosk/Ratatosk.svg",
+          "alt": "Ratatosk News logo",
+          "caption": "Ratatosk News is a small Supabase-powered news platform."
+        },
+        "description": "A simple news platform with authentication, persistent posts, and member interactions.",
+        "sections": [
+          {
+            "heading": "Project overview",
+            "paragraph": "Ratatosk News allows users to register, verify their accounts, log in, and interact with posts stored in Supabase. Authenticated members can create and delete posts.",
+            "image": null,
+            "imagePosition": "below"
+          },
+          {
+            "heading": "Technology and outcome",
+            "paragraph": "The project demonstrates vanilla JavaScript, Tailwind CSS, Supabase authentication, database persistence, and clear authenticated navigation states.",
+            "image": null,
+            "imagePosition": "below"
+          }
+        ],
+        "improvement": "Project notes",
+        "improvementReason": [
+          "The project was a quick course assignment with a small, focused feature set."
+        ],
+        "process": "The work focused on connecting a static frontend to Supabase authentication and data persistence while keeping the main news flows simple."
+      },
+      "featured": false,
+      "dateCreated": "2025-04-01",
       "status": "archived"
     }
   ],
   "settings": {
     "maxFeaturedProjects": 3,
     "sortBy": "dateCreated",
-    "sortOrder": "desc"
+    "sortOrder": "desc",
+    "projectOrder": [
+      "holidaze",
+      "slovstuggu-gcg",
+      "smart-recipe-book",
+      "mimir",
+      "butta",
+      "barter",
+      "e-co",
+      "oslo-community-science-museum",
+      "rainy-days",
+      "ratatosk"
+    ]
   }
 }
